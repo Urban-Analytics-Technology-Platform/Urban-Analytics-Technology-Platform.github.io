@@ -45,7 +45,7 @@ const projects = await Astro.glob("../pages/projects/**/*.md");
 
     {projects.map(project=>(
 			<Card
-				href={project.url}
+				href={project.url ?? ""}
 				title={project.frontmatter.title}
 				body={project.frontmatter.description}
         img={project.frontmatter.image.url}
