@@ -42,7 +42,7 @@ console.log(projectRows);
     <div class="container">
         {projectRows.map((row) => 
             <div class="row">
-            {row.map((proj) => 
+            {row.map((proj: ProjectDetails) => 
                 <ProjectCard project={proj} />
             )}
             </div>
