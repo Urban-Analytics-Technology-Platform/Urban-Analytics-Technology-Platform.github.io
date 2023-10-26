@@ -1,5 +1,5 @@
 ---
-title: 'Demoland'
+name: 'Demoland'
 layout: ../../layouts/ProjectLayout.astro
 description: 'Spatial modelling for land management predicting the impact of large-scale planning and land use changes on the quality of life.'
 image:

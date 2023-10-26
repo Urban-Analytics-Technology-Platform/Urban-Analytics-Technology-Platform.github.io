@@ -1,30 +1,18 @@
 ---
 import Main from '../layouts/Main.astro';
-import type { MarkdownInstance } from 'astro';
 
-// TODO: Figure out how to parse this into the structure below, and/or put more info in
-const projects = await Astro.glob("../pages/projects/**/*.md");
+import { getCollection } from 'astro:content';
+import ProjectList from "../components/ProjectList.astro";
 
-function makeProjectFromMarkdown(project: MarkdownInstance<Record<string, any>>) {
-    return {
-        name: project.frontmatter.title as string,
-        description: project.frontmatter.description as string,
-        tier: parseInt(project.frontmatter.tier),
-        image: {
-            url: project.frontmatter.image.url as string,
-            alt: project.frontmatter.image.alt as string,
-        },
-        link: project.frontmatter.link as string,
-        github: project.frontmatter.github as string,
-        tags: project.frontmatter.tags as string[],
-        internalUrl: project.url as string,
-    };
-}
+const projects = await getCollection('project');
+const tier1Projects = projects.filter((project) => project.data.tier === 1);
+const tier2Projects = projects.filter((project) => project.data.tier === 2);
 
-const parsedProjects = projects.map(makeProjectFromMarkdown);
 ---
 
 <Main
     title="Urban Analytics Technology Platform"
-    projects={parsedProjects}
 >
+  <ProjectList title="Tier 1 Projects" description="These are really important!" projects={tier1Projects} />
+  <ProjectList title="Tier 2 Projects" description="These are also really important!" projects={tier2Projects} />
+</Main>

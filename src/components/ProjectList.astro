@@ -1,12 +1,12 @@
 ---
 import "../assets-arcana/css/main.css";
-import type { ProjectDetails } from "../types";
+import type {CollectionEntry} from "astro:content"
 import ProjectCard from "./ProjectCard.astro";
 
 interface Props {
     title: string;
     description: string;
-    projects: ProjectDetails[];
+    projects: Array<CollectionEntry<'project'>>;
 }
 
 const { title, description, projects } = Astro.props;
@@ -15,6 +15,7 @@ const { title, description, projects } = Astro.props;
 const N = 2;
 const nrows = Math.ceil(projects.length / N);
 const projectRows = new Array(nrows).fill([]);
+
 projects.forEach((project, i) => {
     const row = Math.floor(i / N);
     projectRows[row].push(project);
@@ -35,7 +36,7 @@ projects.forEach((project, i) => {
     <div class="container">
         {projectRows.map((row) => 
             <div class="row">
-            {row.map((proj: ProjectDetails) => 
+            {row.map((proj:CollectionEntry<'project'>) => 
                 <ProjectCard project={proj} />
             )}
             </div>
