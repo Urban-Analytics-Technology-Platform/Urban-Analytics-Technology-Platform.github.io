@@ -1,5 +1,5 @@
 ---
-import "./public/arcana/css/main.css";
+import "../assets-arcana/css/main.css";
 import ProjectList from "../components/ProjectList.astro";
 
 interface Props {
@@ -176,12 +176,12 @@ const { title, tier1Projects, tier2Projects } = Astro.props;
 
         <!-- Must use is:inline to stop Astro from gobbling the scripts.
              https://docs.astro.build/en/guides/client-side-scripts/ -->
-        <script is:inline src="public/arcana/js/jquery.min.js"></script>
-        <script is:inline src="public/arcana/js/jquery.dropotron.min.js"></script>
-        <script is:inline src="public/arcana/js/browser.min.js"></script>
-        <script is:inline src="public/arcana/js/breakpoints.min.js"></script>
-        <script is:inline src="public/arcana/js/util.js"></script>
-        <script is:inline src="public/arcana/js/main.js"></script>
+        <script is:inline src="/arcana-js/jquery.min.js"></script>
+        <script is:inline src="/arcana-js/jquery.dropotron.min.js"></script>
+        <script is:inline src="/arcana-js/browser.min.js"></script>
+        <script is:inline src="/arcana-js/breakpoints.min.js"></script>
+        <script is:inline src="/arcana-js/util.js"></script>
+        <script is:inline src="/arcana-js/main.js"></script>
 
 	</body>
 </html>

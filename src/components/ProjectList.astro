@@ -1,5 +1,6 @@
 ---
-import "./public/arcana/css/main.css";
+import "../assets-arcana/css/main.css";
+
 import ProjectCard from "./ProjectCard.astro";
 
 type ProjectDetails = {
@@ -25,7 +26,6 @@ projects.forEach((project, i) => {
     const row = Math.floor(i / N);
     projectRows[row].push(project);
 });
-console.log(projectRows);
 ---
 
 <section class="wrapper style2">
