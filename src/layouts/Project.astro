@@ -1,0 +1,54 @@
+---
+import "../assets-arcana/css/main.css";
+import Base from "./Base.astro";
+import type { MarkdownInstance } from "astro";
+import { makeProjectFromMarkdown } from "../types";
+
+const proj = makeProjectFromMarkdown(Astro.props as MarkdownInstance<Record<string, any>>);
+---
+
+<Base>
+    <section class="wrapper style1">
+        <div class="container">
+            <div class="row gtr-200">
+                <div class="col-3 col-12-narrower">
+
+                    <div id="sidebar">
+                            <section>
+                                <h3>Summary</h3>
+                                <p>Principal investigator: <code>proj.pi</code></p>
+                                <p>Funders: <code>proj.funders</code></p>
+                                <footer>
+                                </footer>
+                            </section>
+
+                            <section>
+                                <h3>Quick links</h3>
+                                <ul class="links">
+                                    <li><a href={proj.github}>GitHub repository</a></li>
+                                    <li><a href={proj.link}>Web app</a></li>
+                                </ul>
+                            </section>
+
+                    </div>
+                </div>
+
+                <div class="col-9  col-12-narrower imp-narrower">
+                    <div id="content">
+                            <article>
+                                <header>
+                                    <h2>{proj.name}</h2>
+                                    <p>{proj.description}</p>
+                                </header>
+
+                                <!-- <span class="image featured"><img src="images/banner.jpg" alt="" /></span> -->
+
+                                <slot />
+                            </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</Base>
