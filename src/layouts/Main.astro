@@ -1,22 +1,17 @@
 ---
 import "../assets-arcana/css/main.css";
+import type { ProjectDetails } from "../types";
 import ProjectList from "../components/ProjectList.astro";
 
 interface Props {
 	title: string;
-    tier1Projects: ProjectDetails[];
-    tier2Projects: ProjectDetails[];
+    projects: ProjectDetails[];
 }
 
-// TODO: extract this type and put it somewhere
-type ProjectDetails = {
-    name: string;
-    description: string;
-    image: string;
-    link: string;
-}
+const { title, projects } = Astro.props;
 
-const { title, tier1Projects, tier2Projects } = Astro.props;
+const tier1Projects = projects.filter((project) => project.tier === 1);
+const tier2Projects = projects.filter((project) => project.tier === 2);
 ---
 
 <!doctype html>

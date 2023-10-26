@@ -1,14 +1,7 @@
 ---
 import "../assets-arcana/css/main.css";
-
+import type { ProjectDetails } from "../types";
 import ProjectCard from "./ProjectCard.astro";
-
-type ProjectDetails = {
-    name: string;
-    description: string;
-    image: string;
-    link: string;
-}
 
 interface Props {
     title: string;

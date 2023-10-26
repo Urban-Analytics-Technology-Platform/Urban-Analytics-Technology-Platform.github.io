@@ -1,12 +1,6 @@
 ---
 import "../assets-arcana/css/main.css";
-
-type ProjectDetails = {
-    name: string;
-    description: string;
-    image: string;
-    link: string;
-}
+import type { ProjectDetails } from "../types";
 
 interface Props {
     project: ProjectDetails;
@@ -17,9 +11,9 @@ const { project } = Astro.props;
 
 <section class="col-6 col-12-narrower">
     <div class="box post">
-        <a href={project.link} class="image left"><img src={project.image} alt={project.name} /></a>
+        <a href={project.internalUrl} class="image left"><img src={project.image.url} alt={project.image.alt} /></a>
         <div class="inner">
-            <h3>{project.name}</h3>
+            <h3><a href={project.internalUrl}>{project.name}</a></h3>
             <p>{project.description}</p>
         </div>
     </div>

@@ -1,38 +1,30 @@
 ---
 import Main from '../layouts/Main.astro';
+import type { MarkdownInstance } from 'astro';
 
 // TODO: Figure out how to parse this into the structure below, and/or put more info in
 const projects = await Astro.glob("../pages/projects/**/*.md");
 
+function makeProjectFromMarkdown(project: MarkdownInstance<Record<string, any>>) {
+    return {
+        name: project.frontmatter.title as string,
+        description: project.frontmatter.description as string,
+        tier: parseInt(project.frontmatter.tier),
+        image: {
+            url: project.frontmatter.image.url as string,
+            alt: project.frontmatter.image.alt as string,
+        },
+        link: project.frontmatter.link as string,
+        github: project.frontmatter.github as string,
+        tags: project.frontmatter.tags as string[],
+        internalUrl: project.url as string,
+    };
+}
 
-const tier1Projects = [
-    {
-        name: "DemoLand",
-        description: "“I do not know what your opinion may be, Mrs. Weston,” said Mr. Knightley, “of this great intimacy between Emma and Harriet Smith, but I think it a bad thing.”",
-        image: "https://i.discogs.com/ZJXigPb0Tc1c4GOe6ssw6rtXPZBYOJNSoctCmXhTkfY/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU2NTc3/MC0xMjk4MjA3NDMx/LmpwZWc.jpeg",
-        link: "demoland",
-    },
-    {
-        name: "popgetter",
-        description: "“Ah! ma’am, but there may be a difficulty. Pardon me—but you will be limited as to number—only three at once.”",
-        image: "https://ih1.redbubble.net/image.4761908932.1283/raf,750x1000,075,t,101010:01c5ca27c6.jpg",
-        link: "popgetter",
-    }
-]
-
-const tier2Projects = [
-    {
-        name: "DemoLand",
-        description: "hello",
-        image: "https://www.turing.ac.uk/sites/default/files/styles/people/public/2021-10/carto_closeup.jpg?itok=LIha5ATg",
-        link: "demoland",
-    }
-]
-
+const parsedProjects = projects.map(makeProjectFromMarkdown);
 ---
 
 <Main
     title="Urban Analytics Technology Platform"
-    tier1Projects={tier1Projects}
-    tier2Projects={tier2Projects}
+    projects={parsedProjects}
 >
