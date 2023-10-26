@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const projects = await Astro.glob("../pages/projects/**/*.md");
 ---
 
 <Layout title="Urban Analytics Technology Platform">
@@ -41,41 +42,21 @@ import Card from '../components/Card.astro';
     <img src="https://i.imgflip.com/83vtf4.jpg"/>
 
 		<ul role="list" class="link-card-grid">
+
+    {projects.map(project=>(
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href={project.url}
+				title={project.frontmatter.title}
+				body={project.frontmatter.description}
+        img={project.frontmatter.image.url}
 			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+      )
+    )}
 		</ul>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-    text-align:center;
-	}
   .center-image{
     margin: 0px auto;
   }
