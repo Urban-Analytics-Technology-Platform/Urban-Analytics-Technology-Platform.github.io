@@ -1,0 +1,27 @@
+---
+import "./public/arcana/css/main.css";
+
+type ProjectDetails = {
+    name: string;
+    description: string;
+    image: string;
+    link: string;
+}
+
+interface Props {
+    project: ProjectDetails;
+}
+
+const { project } = Astro.props;
+console.log(project);
+---
+
+<section class="col-6 col-12-narrower">
+    <div class="box post">
+        <a href={project.link} class="image left"><img src={project.image} alt={project.name} /></a>
+        <div class="inner">
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,53 @@
+---
+import "./public/arcana/css/main.css";
+import ProjectCard from "./ProjectCard.astro";
+
+type ProjectDetails = {
+    name: string;
+    description: string;
+    image: string;
+    link: string;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    projects: ProjectDetails[];
+}
+
+const { title, description, projects } = Astro.props;
+
+// Group projects into rows of N each
+const N = 2;
+const nrows = Math.ceil(projects.length / N);
+const projectRows = new Array(nrows).fill([]);
+projects.forEach((project, i) => {
+    const row = Math.floor(i / N);
+    projectRows[row].push(project);
+});
+console.log(projectRows);
+---
+
+<section class="wrapper style2">
+    <div class="container">
+        <header class="major">
+            <h2>{title}</h2>
+            <p>{description}</p>
+        </header>
+    </div>
+</section>
+
+
+<section class="wrapper style1">
+    <div class="container">
+        {projectRows.map((row) => 
+            <div class="row">
+            {row.map((proj) => 
+                <ProjectCard project={proj} />
+            )}
+            </div>
+        )}
+    </div>
+</section>
+
+
