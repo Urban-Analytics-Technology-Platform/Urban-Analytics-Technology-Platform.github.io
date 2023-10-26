@@ -8,6 +8,10 @@ const {frontmatter} = Astro.props;
   <main>
     <h1>{frontmatter.title}</h1>
     <p>{frontmatter.description}</p>
+    
+    <a href={frontmatter.github}>Github</a>
+    <a href={frontmatter.link}>Visit Project</a>
+
     <img src={frontmatter.image.url} alt={frontmatter.image.alt}/>
     <slot />
   </main>

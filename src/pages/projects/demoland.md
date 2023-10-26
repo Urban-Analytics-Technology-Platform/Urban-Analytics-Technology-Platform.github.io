@@ -6,6 +6,8 @@ image:
     url: 'https://alan-turing-institute.github.io/demoland-web/assets/map-7fd64ded.png'
     alt: 'Screenshot showing the demoland application'
 tags: ["modelling", "quality of life", "land use"]
+github: "https://github.com/alan-turing-institute/demoland-web"
+link: "https://alan-turing-institute.github.io/demoland-web/#10.05/54.94/-1.59"
 ---
 
 This interactive app showcases the outcomes of the Land Use Demonstrator project, which seeks to develop a modelling system leveraging data science and AI to support decision-making in land use policy.
