@@ -1,6 +1,5 @@
 ---
-title: 'Popgetter'
-layout: ../../layouts/Project.astro
+name: 'Popgetter'
 description: 'Get all the census you need or want using popgetter' 
 image:
     url: '/images/popgetter.png'

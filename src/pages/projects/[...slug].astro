@@ -1,10 +1,16 @@
 ---
-import "../assets-arcana/css/main.css";
-import Base from "./Base.astro";
-import type { MarkdownInstance } from "astro";
-import { makeProjectFromMarkdown } from "../types";
+import { getCollection } from 'astro:content';
+import Base from "../../layouts/Base.astro"
 
-const proj = makeProjectFromMarkdown(Astro.props as MarkdownInstance<Record<string, any>>);
+export async function getStaticPaths() {
+  const project = await getCollection('project');
+  return project.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
 ---
 
 <Base>
@@ -16,8 +22,8 @@ const proj = makeProjectFromMarkdown(Astro.props as MarkdownInstance<Record<stri
                     <div id="sidebar">
                             <section>
                                 <h3>Summary</h3>
-                                <p>Principal investigator: <code>proj.pi</code></p>
-                                <p>Funders: <code>proj.funders</code></p>
+                                <p>Principal investigator: <code>entry.data.pi</code></p>
+                                <p>Funders: <code>entry.data.funders</code></p>
                                 <footer>
                                 </footer>
                             </section>
@@ -25,8 +31,8 @@ const proj = makeProjectFromMarkdown(Astro.props as MarkdownInstance<Record<stri
                             <section>
                                 <h3>Quick links</h3>
                                 <ul class="links">
-                                    <li><a href={proj.github}>GitHub repository</a></li>
-                                    <li><a href={proj.link}>Web app</a></li>
+                                    <li><a href={entry.data.github}>GitHub repository</a></li>
+                                    <li><a href={entry.data.link}>Web app</a></li>
                                 </ul>
                             </section>
 
@@ -37,18 +43,15 @@ const proj = makeProjectFromMarkdown(Astro.props as MarkdownInstance<Record<stri
                     <div id="content">
                             <article>
                                 <header>
-                                    <h2>{proj.name}</h2>
-                                    <p>{proj.description}</p>
+                                    <h2>{entry.data.name}</h2>
+                                    <p>{entry.data.description}</p>
                                 </header>
+                                <Content/>
 
-                                <!-- <span class="image featured"><img src="images/banner.jpg" alt="" /></span> -->
-
-                                <slot />
                             </article>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 </Base>

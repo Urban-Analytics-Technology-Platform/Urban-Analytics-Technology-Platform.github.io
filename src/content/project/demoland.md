@@ -1,6 +1,5 @@
 ---
-title: 'Demoland'
-layout: ../../layouts/Project.astro
+name: 'Demoland'
 description: 'Spatial modelling for land management predicting the impact of large-scale planning and land use changes on the quality of life.'
 image:
     url: 'https://alan-turing-institute.github.io/demoland-web/assets/map-7fd64ded.png'
