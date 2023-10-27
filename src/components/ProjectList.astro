@@ -14,7 +14,10 @@ const { title, description, projects } = Astro.props;
 // Group projects into rows of N each
 const N = 2;
 const nrows = Math.ceil(projects.length / N);
-const projectRows = new Array(nrows).fill([]);
+// Can't use fill([]) because that fills with a pointer to the same array
+const projectRows: Array<Array<CollectionEntry<"project">>> = new Array(nrows)
+  .fill(0)
+  .map(() => []);
 
 projects.forEach((project, i) => {
   const row = Math.floor(i / N);
