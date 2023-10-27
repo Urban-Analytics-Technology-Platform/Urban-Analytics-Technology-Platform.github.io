@@ -1,11 +1,13 @@
 ---
 import "../assets-arcana/css/main.css";
+import Base from "./Base.astro"
 
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+---
 
 <Base>
   <slot />

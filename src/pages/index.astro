@@ -7,7 +7,7 @@ import ProjectList from "../components/ProjectList.astro";
 const projects = await getCollection('project');
 const tier1Projects = projects.filter((project) => project.data.tier === 1);
 const tier2Projects = projects.filter((project) => project.data.tier === 2);
-
+---
 
 <Main title="Urban Analytics Technology Platform">
 	<section class="wrapper style1">

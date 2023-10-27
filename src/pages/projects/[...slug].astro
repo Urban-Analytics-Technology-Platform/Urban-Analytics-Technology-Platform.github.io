@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import Main from "../../layouts/Main.astro"
+import Base from "../../layouts/Base.astro"
 
 export async function getStaticPaths() {
   const project = await getCollection('project');
@@ -11,16 +11,49 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+console.log("entry is ", entry)
+console.log("content is ", Content)
 ---
 
-<Main title={entry.data.title}>
-    <h1>{entry.data.title}</h1>
-    <p>{entry.data.description}</p>
-    
-    <a href={entry.data.github}>Github</a>
-    <a href={entry.data.link}>Visit Project</a>
-    {entry.data.image &&
-      <img src={entry.data.image.url} alt={entry.data.image.alt}/>
-    }
-  <Content />
-</Main>
+<Base>
+    <section class="wrapper style1">
+        <div class="container">
+            <div class="row gtr-200">
+                <div class="col-3 col-12-narrower">
+
+                    <div id="sidebar">
+                            <section>
+                                <h3>Summary</h3>
+                                <p>Principal investigator: <code>entry.data.pi</code></p>
+                                <p>Funders: <code>entry.data.funders</code></p>
+                                <footer>
+                                </footer>
+                            </section>
+
+                            <section>
+                                <h3>Quick links</h3>
+                                <ul class="links">
+                                    <li><a href={entry.data.github}>GitHub repository</a></li>
+                                    <li><a href={entry.data.link}>Web app</a></li>
+                                </ul>
+                            </section>
+
+                    </div>
+                </div>
+
+                <div class="col-9  col-12-narrower imp-narrower">
+                    <div id="content">
+                            <article>
+                                <header>
+                                    <h2>{entry.data.name}</h2>
+                                    <p>{entry.data.description}</p>
+                                </header>
+                                <Content/>
+
+                            </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Base>
