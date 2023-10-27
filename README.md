@@ -1,7 +1,6 @@
-# Urban Analytics Technology Platform Website 
+# Urban Analytics Technology Platform Website
 
-
-## 🚀 Project Layout 
+## 🚀 Project Layout
 
 Inside of your Astro project, you'll see the following folders and files:
 
@@ -20,7 +19,7 @@ Inside of your Astro project, you'll see the following folders and files:
 ```
 
 Individual project descriptions are in src/pages/projects
-Components live in the components directory 
+Components live in the components directory
 Layouts live in the layouts directory
 
 ## 🧞 Commands
@@ -36,6 +35,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Astro documentation 
+## 👀 Astro documentation
 
 The site is built using Astro, for more documentation check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
