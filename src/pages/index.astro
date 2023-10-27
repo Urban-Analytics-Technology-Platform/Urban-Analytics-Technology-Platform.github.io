@@ -1,5 +1,5 @@
 ---
-import Main from '../layouts/Main.astro';
+import Base from '../layouts/Base.astro';
 
 import { getCollection } from 'astro:content';
 import ProjectList from "../components/ProjectList.astro";
@@ -9,7 +9,7 @@ const tier1Projects = projects.filter((project) => project.data.tier === 1);
 const tier2Projects = projects.filter((project) => project.data.tier === 2);
 ---
 
-<Main title="Urban Analytics Technology Platform">
+<Base>
 	<section class="wrapper style1">
 		<div class="container">
 			<div class="row gtr-200">
@@ -39,4 +39,4 @@ const tier2Projects = projects.filter((project) => project.data.tier === 2);
 	</section>
   <ProjectList title="Tier 1 Projects" description="These are really important!" projects={tier1Projects} />
   <ProjectList title="Tier 2 Projects" description="These are also really important!" projects={tier2Projects} />
-</Main>
+</Base>
