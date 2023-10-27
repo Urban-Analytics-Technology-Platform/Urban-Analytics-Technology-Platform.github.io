@@ -1,12 +1,12 @@
 ---
 import "../assets-arcana/css/main.css";
-import type {CollectionEntry} from "astro:content"
+import type { CollectionEntry } from "astro:content";
 import ProjectCard from "./ProjectCard.astro";
 
 interface Props {
-    title: string;
-    description: string;
-    projects: Array<CollectionEntry<'project'>>;
+  title: string;
+  description: string;
+  projects: Array<CollectionEntry<"project">>;
 }
 
 const { title, description, projects } = Astro.props;
@@ -17,31 +17,30 @@ const nrows = Math.ceil(projects.length / N);
 const projectRows = new Array(nrows).fill([]);
 
 projects.forEach((project, i) => {
-    const row = Math.floor(i / N);
-    projectRows[row].push(project);
+  const row = Math.floor(i / N);
+  projectRows[row].push(project);
 });
 ---
 
 <section class="wrapper style2">
-    <div class="container">
-        <header class="major">
-            <h2>{title}</h2>
-            <p>{description}</p>
-        </header>
-    </div>
+  <div class="container">
+    <header class="major">
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </header>
+  </div>
 </section>
-
 
 <section class="wrapper style1">
-    <div class="container">
-        {projectRows.map((row) => 
-            <div class="row">
-            {row.map((proj:CollectionEntry<'project'>) => 
-                <ProjectCard project={proj} />
-            )}
-            </div>
-        )}
-    </div>
+  <div class="container">
+    {
+      projectRows.map((row) => (
+        <div class="row">
+          {row.map((proj: CollectionEntry<"project">) => (
+            <ProjectCard project={proj} />
+          ))}
+        </div>
+      ))
+    }
+  </div>
 </section>
-
-

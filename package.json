@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "husky install",
-    "format": "prettier . --write"
+    "format": "prettier . --write **/*.astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.2.1",

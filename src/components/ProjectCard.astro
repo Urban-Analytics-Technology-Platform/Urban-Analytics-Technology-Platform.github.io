@@ -1,24 +1,26 @@
 ---
 import "../assets-arcana/css/main.css";
-import type {CollectionEntry} from "astro:content"
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-    project: CollectionEntry<"project">;
+  project: CollectionEntry<"project">;
 }
 
 const { project } = Astro.props;
 ---
 
 <section class="col-6 col-12-narrower">
-    <div class="box post">
-        <a href={"/projects/"+project.slug} class="image left">
-        {project.data.image &&
-            <img src={project.data.image.url} alt={project.data.image.alt} />
-        }
-        </a>
-        <div class="inner">
-            <h3><a href={"/projects/"+project.slug}>{project.data.name}</a></h3>
-            <p>{project.data.description}</p>
-        </div>
+  <div class="box post">
+    <a href={"/projects/" + project.slug} class="image left">
+      {
+        project.data.image && (
+          <img src={project.data.image.url} alt={project.data.image.alt} />
+        )
+      }
+    </a>
+    <div class="inner">
+      <h3><a href={"/projects/" + project.slug}>{project.data.name}</a></h3>
+      <p>{project.data.description}</p>
     </div>
+  </div>
 </section>
