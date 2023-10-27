@@ -13,47 +13,55 @@ const tier2Projects = projects.filter((project) => project.data.tier === 2);
   <section class="wrapper style1">
     <div class="container">
       <div class="row gtr-200">
-        <section class="col-4 col-12-narrower">
-          <div class="box highlight">
-            <img src="https://i.imgflip.com/83vtf4.jpg" alt="" />
-            <h3>This Is Important</h3>
-            <p>
-              Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus
-              nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.
-            </p>
-          </div>
-        </section>
-        <section class="col-4 col-12-narrower">
-          <div class="box highlight">
-            <img src="https://i.imgflip.com/83vtf4.jpg" alt="" />
-            <h3>Also Important</h3>
-            <p>
-              Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus
-              nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.
-            </p>
-          </div>
-        </section>
-        <section class="col-4 col-12-narrower">
-          <div class="box highlight">
-            <img src="https://i.imgflip.com/83vtf4.jpg" alt="" />
-            <h3>Probably Important</h3>
-            <p>
-              Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus
-              nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.
-            </p>
-          </div>
-        </section>
+							<section class="col-3 col-12-narrower">
+								<div class="box highlight">
+									<img class="hero-image" src="/images/digital_twins.jpg" alt="" />
+									<h3>Digital Twins</h3>
+									<p>How do we use new data and algorithms to simulate aspects of the urban environment and evaluate urban polices?</p>
+								</div>
+							</section>
+							<section class="col-3 col-12-narrower">
+								<div class="box highlight">
+									<img class="hero-image" style="object-fit: cover;" src="/images/land_use.jpg" alt="" />
+									<h3>Land Use</h3>
+									<p>How do we use new forms of data and AI to predict and optimize land use planning for buildings, cities and landscapes?</p>
+								</div>
+							</section>
+							<section class="col-3 col-12-narrower">
+								<div class="box highlight">
+									<img class="hero-image" style="object-fit: cover;" src="/images/urban_mobility.jpg" alt="" />
+									<h3>Urban Mobility</h3>
+									<p>How do we promote equity and efficiency in all forms of urban mobility? How do we help local and national governments improve public infrastructure?</p>
+								</div>
+							</section>
+							<section class="col-3 col-12-narrower">
+								<div class="box highlight">
+									<img  class="hero-image" style="object-fit: cover;" src="/images/liveability.jpg" alt="" />
+									<h3>Liveability</h3>
+									<p>How do we promote health, sustainability and prosperity for city populations?</p>
+								</div>
+							</section>
+						</div>   
+         </section>
       </div>
     </div>
   </section>
   <ProjectList
     title="Tier 1 Projects"
-    description="These are really important!"
+    description="High-level applications driven by collaborations with partners and the theme priorities"
     projects={tier1Projects}
   />
   <ProjectList
     title="Tier 2 Projects"
-    description="These are also really important!"
+    description="Low level packages and data that can be reused in many contexts"
     projects={tier2Projects}
   />
 </Base>
+
+<style>
+  .hero-image{
+    object-fit: cover;
+    width:240px;
+    height:255px;
+  }
+</style>
