@@ -44,6 +44,9 @@ const { Content } = await entry.render();
                 <h2>{entry.data.name}</h2>
                 <p>{entry.data.description}</p>
               </header>
+                {entry.data.image &&
+                  <img src={entry.data.image.url} alt={entry.data.image.alt} />
+                }
               <Content />
             </article>
           </div>
