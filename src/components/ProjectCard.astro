@@ -13,8 +13,9 @@ const { project } = Astro.props;
     <div class="box post">
         <a href={"/projects/"+project.slug} class="image left">
         {project.data.image &&
-            <img src={project.data.image.url} alt={project.data.image.alt} /></a>
+            <img src={project.data.image.url} alt={project.data.image.alt} />
         }
+        </a>
         <div class="inner">
             <h3><a href={"/projects/"+project.slug}>{project.data.name}</a></h3>
             <p>{project.data.description}</p>
