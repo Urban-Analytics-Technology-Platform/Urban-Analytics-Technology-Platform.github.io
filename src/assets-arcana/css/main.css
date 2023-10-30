@@ -3317,7 +3317,7 @@ input, select, textarea {
 		/* Box */
 
 			.box.highlight {
-				padding-left: calc(4em + 30px);
+				padding-left: 0px  ;
 			}
 
 			.box.post .inner {
