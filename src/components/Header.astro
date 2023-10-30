@@ -1,7 +1,7 @@
 ---
 import "../assets-arcana/css/main.css";
 import { getCollection } from "astro:content";
-import TuringLogo from "../logo.svg"
+import TuringLogo from "../logo.svg";
 
 interface Props {
   title: string;
@@ -12,13 +12,27 @@ const { title } = Astro.props;
 const projects = await getCollection("project");
 const tier1Projects = projects.filter((project) => project.data.tier === 1);
 const tier2Projects = projects.filter((project) => project.data.tier === 2);
+
+const indexPathnames = ["/index.html", "/"];
+const tier1Pathnames = tier1Projects.map(
+  (project) => "/projects/" + project.slug,
+);
+const tier2Pathnames = tier2Projects.map(
+  (project) => "/projects/" + project.slug,
+);
 ---
 
 <div id="header">
   <!-- Logo -->
-  <div id="background" >
-    <div class='relative'>
-      <img width=150 src={TuringLogo.src} alt="Turing Logo" class="absolute" style="top:45px;left:45px"  />;
+  <div id="background">
+    <div class="relative">
+      <img
+        width="150"
+        src={TuringLogo.src}
+        alt="Turing Logo"
+        class="absolute"
+        style="top:45px;left:45px"
+      />;
       <h1><a href="/index.html" id="logo">{title}</a></h1>
     </div>
   </div>
@@ -26,21 +40,31 @@ const tier2Projects = projects.filter((project) => project.data.tier === 2);
   <!-- Nav -->
   <nav id="nav">
     <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li>
+      <li class={indexPathnames.includes(Astro.url.pathname) ? "current" : ""}>
+        <a href="/index.html">Home</a>
+      </li>
+      <li class={tier1Pathnames.includes(Astro.url.pathname) ? "current" : ""}>
         <a href="#">Tier 1 Projects</a>
         <ul>
-          {tier1Projects.map((project)=>(
-            <li><a href={"/projects/"+project.slug}>{project.data.name}</a></li>
-          ))}
+          {
+            tier1Projects.map((project) => (
+              <li>
+                <a href={"/projects/" + project.slug}>{project.data.name}</a>
+              </li>
+            ))
+          }
         </ul>
       </li>
-      <li>
+      <li class={tier2Pathnames.includes(Astro.url.pathname) ? "current" : ""}>
         <a href="#">Tier 2 Projects</a>
         <ul>
-          {tier2Projects.map((project)=>(
-            <li><a href={"/projects/"+project.slug}>{project.data.name}</a></li>
-          ))}
+          {
+            tier2Projects.map((project) => (
+              <li>
+                <a href={"/projects/" + project.slug}>{project.data.name}</a>
+              </li>
+            ))
+          }
         </ul>
       </li>
     </ul>
