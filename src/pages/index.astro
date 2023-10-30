@@ -3,11 +3,38 @@ import Base from "../layouts/Base.astro";
 
 import { getCollection } from "astro:content";
 import ProjectList from "../components/ProjectList.astro";
-import ThemeSection from "../components/ThemeSection.astro";
+import Themes from "../components/Themes.astro";
 
 const projects = await getCollection("project");
 const tier1Projects = projects.filter((project) => project.data.tier === 1);
 const tier2Projects = projects.filter((project) => project.data.tier === 2);
+
+const themes = [
+  {
+    title: "Digital Twins",
+    description:
+      "How do we use new data and algorithms to simulate aspects of the urban environment and evaluate urban polices?",
+    image_src: "/images/digital_twins.jpg",
+  },
+  {
+    title: "Land Use",
+    description:
+      "How do we use new forms of data and AI to predict and optimize land use planning for buildings, cities and landscapes?",
+    image_src: "/images/land_use.jpg",
+  },
+  {
+    title: "Urban Mobility",
+    description:
+      "How do we promote equity and efficiency in all forms of urban mobility? How do we help local and national governments improve public infrastructure?",
+    image_src: "/images/urban_mobility.jpg",
+  },
+  {
+    title: "Liveability",
+    description:
+      "How do we promote health, sustainability and prosperity for city populations?",
+    image_src: "/images/liveability.jpg",
+  },
+];
 ---
 
 <Base>
@@ -34,28 +61,7 @@ const tier2Projects = projects.filter((project) => project.data.tier === 2);
         </section>
       </div>
 
-      <div class="row gtr-200">
-        <ThemeSection
-          title="Digital Twins"
-          description="How do we use new data and algorithms to simulate aspects of the urban environment and evaluate urban polices?"
-          image_src="/images/digital_twins.jpg"
-        />
-        <ThemeSection
-          title="Land Use"
-          description="How do we use new forms of data and AI to predict and optimize land use planning for buildings, cities and landscapes?"
-          image_src="/images/land_use.jpg"
-        />
-        <ThemeSection
-          title="Urban Mobility"
-          description="How do we promote equity and efficiency in all forms of urban mobility? How do we help local and national governments improve public infrastructure?"
-          image_src="/images/urban_mobility.jpg"
-        />
-        <ThemeSection
-          title="Liveability"
-          description="How do we promote health, sustainability and prosperity for city populations?"
-          image_src="/images/liveability.jpg"
-        />
-      </div>
+      <Themes themes={themes} />
       <div class="row gtr-200">
         <section class="col-12">
           <p>

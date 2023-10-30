@@ -1,0 +1,57 @@
+---
+import "../assets-arcana/css/main.css";
+
+type Theme = {
+  title: string;
+  description: string;
+  image_src: string;
+};
+
+const { themes } = Astro.props;
+---
+
+<div id="theme-container" class="gtr-200">
+  {
+    themes.map((theme: Theme) => (
+      <section class="theme-box">
+        <div class="box highlight">
+          <img
+            class="theme-image"
+            src={theme.image_src}
+            alt={"Urban Analytics: " + theme.title}
+          />
+          <h3>{theme.title}</h3>
+          <p>{theme.description}</p>
+        </div>
+      </section>
+    ))
+  }
+</div>
+
+<style>
+  /* Use id instead of class to override default theming. */
+  #theme-container {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .theme-image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Narrower screen: 2x2 grid */
+  @media screen and (max-width: 840px) {
+    #theme-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* Narrower screen: column */
+  @media screen and (max-width: 480px) {
+    #theme-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
