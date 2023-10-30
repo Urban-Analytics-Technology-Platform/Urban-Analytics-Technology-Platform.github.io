@@ -1,0 +1,21 @@
+---
+import "../assets-arcana/css/main.css";
+
+interface Props {
+  title: string;
+  description: string;
+  image_src: string;
+}
+
+const { title, description, image_src } = Astro.props;
+---
+
+<section class="col-3 col-12-narrower">
+  <div class="box highlight">
+    <img class="hero-image" src={image_src} alt={"Urban Analytics: " + title} />
+    <h3>{title}</h3>
+    <p>
+      {description}
+    </p>
+  </div>
+</section>

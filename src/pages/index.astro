@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 
 import { getCollection } from "astro:content";
 import ProjectList from "../components/ProjectList.astro";
+import ThemeSection from "../components/ThemeSection.astro";
 
 const projects = await getCollection("project");
 const tier1Projects = projects.filter((project) => project.data.tier === 1);
@@ -13,47 +14,55 @@ const tier2Projects = projects.filter((project) => project.data.tier === 2);
   <section class="wrapper style1">
     <div class="container">
       <div class="row gtr-200">
-              <section class='col-12'>
-                <p>
-                  Cities are now home to the majority of the world’s population, and are drivers of economic growth, wealth creation, social interaction and well-being. They also present huge inequalities in health, affluence, education and lifestyle with persistent challenges for management, administration and policy. For example, alongside an existing global market of £400 billion for smart city technology, the UN estimates that $350 trillion or five times global GDP needs to be spent on urban infrastructure to address urgent needs.
-                </p>
-                <p>
-                  The urban analytics programme at the Turing is focused on the process, structure, interactions and evolution of agents, technology and infrastructure within and between cities across spatial and temporal scales. Our work is focused on the following areas:
-                </p>
-              </section>
-							<section class="col-3 col-12-narrower">
-								<div class="box highlight">
-									<img class="hero-image" src="/images/digital_twins.jpg" alt="" />
-									<h3>Digital Twins</h3>
-									<p>How do we use new data and algorithms to simulate aspects of the urban environment and evaluate urban polices?</p>
-								</div>
-							</section>
-							<section class="col-3 col-12-narrower">
-								<div class="box highlight">
-									<img class="hero-image" style="object-fit: cover;" src="/images/land_use.jpg" alt="" />
-									<h3>Land Use</h3>
-									<p>How do we use new forms of data and AI to predict and optimize land use planning for buildings, cities and landscapes?</p>
-								</div>
-							</section>
-							<section class="col-3 col-12-narrower">
-								<div class="box highlight">
-									<img class="hero-image" style="object-fit: cover;" src="/images/urban_mobility.jpg" alt="" />
-									<h3>Urban Mobility</h3>
-									<p>How do we promote equity and efficiency in all forms of urban mobility? How do we help local and national governments improve public infrastructure?</p>
-								</div>
-							</section>
-							<section class="col-3 col-12-narrower">
-								<div class="box highlight">
-									<img  class="hero-image" style="object-fit: cover;" src="/images/liveability.jpg" alt="" />
-									<h3>Liveability</h3>
-									<p>How do we promote health, sustainability and prosperity for city populations?</p>
-								</div>
-							</section>
-              <section class='col-12'>
-                <p>The Urban analytics Technology Platform is a collection of tools built at the Turining Institute to solve common problems in the Urban Analytics space. Their are two tiers of projects which are detailed in the following sections. All of our tools are open source and we welcome colaboration.
-              </section>
-						</div>   
-         </section>
+        <section class="col-12">
+          <p>
+            Cities are now home to the majority of the world’s population, and
+            are drivers of economic growth, wealth creation, social interaction
+            and well-being. They also present huge inequalities in health,
+            affluence, education and lifestyle with persistent challenges for
+            management, administration and policy. For example, alongside an
+            existing global market of £400 billion for smart city technology,
+            the UN estimates that $350 trillion or five times global GDP needs
+            to be spent on urban infrastructure to address urgent needs.
+          </p>
+          <p>
+            The Urban Analytics programme at the Turing is focused on the
+            process, structure, interactions and evolution of agents, technology
+            and infrastructure within and between cities across spatial and
+            temporal scales. Our work is focused on the following areas:
+          </p>
+        </section>
+
+        <ThemeSection
+          title="Digital Twins"
+          description="How do we use new data and algorithms to simulate aspects of the urban environment and evaluate urban polices?"
+          image_src="/images/digital_twins.jpg"
+        />
+        <ThemeSection
+          title="Land Use"
+          description="How do we use new forms of data and AI to predict and optimize land use planning for buildings, cities and landscapes?"
+          image_src="/images/land_use.jpg"
+        />
+        <ThemeSection
+          title="Urban Mobility"
+          description="How do we promote equity and efficiency in all forms of urban mobility? How do we help local and national governments improve public infrastructure?"
+          image_src="/images/urban_mobility.jpg"
+        />
+        <ThemeSection
+          title="Liveability"
+          description="How do we promote health, sustainability and prosperity for city populations?"
+          image_src="/images/liveability.jpg"
+        />
+
+        <section class="col-12">
+          <p>
+            The Urban Analytics Technology Platform is a collection of tools
+            built at The Alan Turing Institute to solve common problems in the
+            Urban Analytics space. Their are two tiers of projects which are
+            detailed in the following sections. All of our tools are open source
+            and we welcome colaboration.
+          </p>
+        </section>
       </div>
     </div>
   </section>
@@ -64,14 +73,14 @@ const tier2Projects = projects.filter((project) => project.data.tier === 2);
   />
   <ProjectList
     title="Tier 2 Projects"
-    description="Low level packages and data that can be reused in many contexts"
+    description="Low-level packages and data that can be reused in many contexts"
     projects={tier2Projects}
   />
 </Base>
 
 <style>
-  .hero-image{
-    width:100%;
+  .hero-image {
+    width: 100%;
     object-fit: cover;
   }
 </style>
