@@ -10,12 +10,33 @@ interface Props {
 const { title, description, image_src } = Astro.props;
 ---
 
-<section class="col-3 col-12-narrower">
+<section class="theme-box">
   <div class="box highlight">
-    <img class="hero-image" src={image_src} alt={"Urban Analytics: " + title} />
+    <img
+      class="theme-image"
+      src={image_src}
+      alt={"Urban Analytics: " + title}
+    />
     <h3>{title}</h3>
     <p>
       {description}
     </p>
   </div>
 </section>
+
+<style>
+  .theme-image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .theme-box {
+    width: 25%;
+  }
+
+  @media screen and (max-width: 840px) {
+    .theme-box {
+      width: 100%;
+    }
+  }
+</style>
