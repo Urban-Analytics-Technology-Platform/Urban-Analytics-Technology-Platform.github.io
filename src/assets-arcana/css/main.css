@@ -3171,6 +3171,12 @@ input, select, textarea {
 					#navPanel .link.depth-0 {
 						color: #fff;
 					}
+                    
+                    #navPanel .link.depth-1 {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
 
 					#navPanel .link .indent-1 {
 						display: inline-block;
