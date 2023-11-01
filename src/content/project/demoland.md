@@ -8,6 +8,13 @@ tags: ["modelling", "quality of life", "land use"]
 github: "https://github.com/alan-turing-institute/demoland-web"
 link: "https://alan-turing-institute.github.io/demoland-web/#10.05/54.94/-1.59"
 tier: 1
+funders: "Geospatial Comission"
+pis:
+  - dani_arribas_bel
+team:
+  - stuart_lynn
+  - martin_fleischmann
+  - jon_yong
 ---
 
 This interactive app showcases the outcomes of the Land Use Demonstrator project, which seeks to develop a modelling system leveraging data science and AI to support decision-making in land use policy.
