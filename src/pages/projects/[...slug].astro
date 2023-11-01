@@ -12,8 +12,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const pis = await getEntries(entry.data.pis);
-const team = await getEntries(entry.data.team);
+const pis = entry.data.pis ? await getEntries(entry.data.pis) : null;
+const team = entry.data.team ? await getEntries(entry.data.team) : null;
 const { Content } = await entry.render();
 ---
 
@@ -29,7 +29,7 @@ const { Content } = await entry.render();
                 Principal investigator: <br />
                 {
                   pis &&
-                    pis.map((pi) => (
+                    pis?.map((pi) => (
                       <code>
                         {
                           // @ts-ignore
@@ -55,7 +55,7 @@ const { Content } = await entry.render();
               <h3>Team</h3>
               <ul class="links">
                 {
-                  team.map((member) => (
+                  team?.map((member) => (
                     <li>
                       <a href="">
                         {
