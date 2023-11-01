@@ -1,18 +1,29 @@
 ---
-name: 'DyME - Climate, Heat and Health (DyME-CHH)'
-description: 'Use disaggregated climate data to model the health effects of heat exposure in different population groups, based on where they live and how they move '
+name: "DyME - Climate, Heat and Health (DyME-CHH)"
+description: "Use disaggregated climate data to model the health effects of heat exposure in different population groups, based on where they live and how they move "
 image:
-    url: 'https://www.turing.ac.uk/sites/default/files/styles/hero/public/2021-12/marek-piwnicki-2kqxgrgunzq-unsplash.jpg?itok=FXDUcYO4'
-    alt: 'Image of hills with trees and the glow of a fire behind them'
+  url: "https://www.turing.ac.uk/sites/default/files/styles/hero/public/2021-12/marek-piwnicki-2kqxgrgunzq-unsplash.jpg?itok=FXDUcYO4"
+  alt: "Image of hills with trees and the glow of a fire behind them"
 tags: ["modelling", "climate"]
 github: "https://www.turing.ac.uk/research/research-projects/impacts-climate-change-and-heat-health"
 link: "https://www.turing.ac.uk/research/research-projects/impacts-climate-change-and-heat-health"
 tier: 1
+funders: "Turing ASG, SoCaR"
+pis:
+  - mark_birkin
+  - gavin_shaddick
+team:
+  - ruth_bowyer
+  - bowen_zhang
+  - griffith_rees
+  - greg_mingas
+  - jennifer_ding
+  - harry_meacher
 ---
 
 # Introduction
 
-The climate emergency is bringing critical changes to our ability to live healthy and prosperous lives.  A changing climate and increasing temperatures, especially in urban areas, means that, more than ever before, we need to understand the complex relationships between our human behaviour, the environment in which we live, and our health in order to develop effective mitigation strategies.
+The climate emergency is bringing critical changes to our ability to live healthy and prosperous lives. A changing climate and increasing temperatures, especially in urban areas, means that, more than ever before, we need to understand the complex relationships between our human behaviour, the environment in which we live, and our health in order to develop effective mitigation strategies.
 
 This project brings together expertise from across the UK to develop the most detailed model to date of how projected future extreme heat events will affect different population groups, and inequalities in those effects, and aid in developing interventions that will, ultimately, save lives. The tools will be developed in concert with local authorities to support their decision-making around strategies to tackle the climate emergency locally.
 
@@ -35,4 +46,3 @@ Integrating the foundations DyMe: the QUANT and SPENSER platforms for urban mobi
 The project will work with Cornwall County Council to explore one of their key interests related to climate change: the effects of changing temperatures on active travel, damp in homes (with warmer, wetter winters) and other health related outcomes. The outputs from DyME-CHH will feed directly into The Local Climate Adaptation Tool (LCAT) that supports evidence-based adaptation by local authorities and public bodies. LCAT brings together climate information, adaptation options and health impact evidence to help users understand the health implications of climate change in their local area. Importantly, LCAT also generates recommendations of appropriate adaptation approaches, based on the best available evidence that will support the health and wellbeing of local people.
 
 Other examples include feeding into the City of Bradford Metropolitan Council’s use of data analytics to provide information on the impacts of climate change and sustainability, and working with the Department for Education who are particularly interested in the role of schools from a context of climate change and sustainability. The outputs of this work will link with the Connected Bradford dataset to meet their green agenda goals. This will allow a better understanding of the impact of school building design on outcomes for children and young people. In Bristol, the project will link the outputs of ‘personal exposures’ to increased heat for different population groups to housing stock and feed directly into their aims to have its estate climate resilient by 2030.
-
