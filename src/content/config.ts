@@ -25,7 +25,7 @@ export const collections = {
     schema: z.object({
       firstName: z.string(),
       lastName: z.string(),
-      avatarURL: z.string(),
+      avatarURL: z.string().optional(),
     }),
   }),
 };
