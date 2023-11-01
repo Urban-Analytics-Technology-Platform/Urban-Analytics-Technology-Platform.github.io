@@ -1,6 +1,7 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry, getEntries } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import PersonLink from "../../components/PersonLink.astro";
 
 export async function getStaticPaths() {
   const project = await getCollection("project");
@@ -11,6 +12,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const pis = await getEntries(entry.data.pis);
+const team = await getEntries(entry.data.team);
 const { Content } = await entry.render();
 ---
 
@@ -22,8 +25,19 @@ const { Content } = await entry.render();
           <div id="sidebar">
             <section>
               <h3>Summary</h3>
-              <p>Principal investigator: <code>entry.data.pi</code></p>
-              <p>Funders: <code>entry.data.funders</code></p>
+              <p>
+                Principal investigator: <br />
+                {
+                  pis &&
+                    pis.map((pi) => (
+                      // @ts-ignore
+                      <code>
+                        <PersonLink person={pi} />
+                      </code>
+                    ))
+                }
+              </p>
+              <p>Funders: <br /> <code>{entry.data.funders}</code></p>
               <footer></footer>
             </section>
 
@@ -32,6 +46,22 @@ const { Content } = await entry.render();
               <ul class="links">
                 <li><a href={entry.data.github}>GitHub repository</a></li>
                 <li><a href={entry.data.link}>Web app</a></li>
+              </ul>
+            </section>
+
+            <section>
+              <h3>Team</h3>
+              <ul class="links">
+                {
+                  team.map((member) => (
+                    // @ts-ignore
+                    <li>
+                      <a href="">
+                        <PersonLink person={member} />
+                      </a>
+                    </li>
+                  ))
+                }
               </ul>
             </section>
           </div>
@@ -44,9 +74,11 @@ const { Content } = await entry.render();
                 <h2>{entry.data.name}</h2>
                 <p>{entry.data.description}</p>
               </header>
-                {entry.data.image &&
+              {
+                entry.data.image && (
                   <img src={entry.data.image.url} alt={entry.data.image.alt} />
-                }
+                )
+              }
               <Content />
             </article>
           </div>

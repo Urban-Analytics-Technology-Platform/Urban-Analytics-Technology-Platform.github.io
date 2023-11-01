@@ -1,0 +1,60 @@
+---
+import { getCollection, getEntry, getEntries } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+export async function getStaticPaths() {
+  const project = await getCollection("people");
+  return project.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const projects = await getCollection("project");
+const projectsForPerson = projects.filter(
+  (project) =>
+    project.data.pis?.find((t) => t.slug === entry.slug) ||
+    project.data.team?.find((t) => t.slug === entry.slug),
+);
+---
+
+<Base>
+  <section class="wrapper style1">
+    <div class="container">
+      <div class="row gtr-200">
+        <div class="col-3 col-12-narrower">
+          <div id="sidebar">
+            <section>
+              <h3>{[entry.data.firstName, entry.data.lastName].join(" ")}</h3>
+            </section>
+            <section>
+              <img src={entry.data.avatarURL} />
+            </section>
+          </div>
+        </div>
+
+        <div class="col-9 col-12-narrower imp-narrower">
+          <div id="content">
+            <article>
+              <header>
+                <h2>Bio</h2>
+              </header>
+              <Content />
+              <header>
+                <h2>Projects</h2>
+              </header>
+              <pre>
+                {projectsForPerson.map(project=>(
+                  <ProjectCard project={project} />
+                ))}
+              </pre>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
