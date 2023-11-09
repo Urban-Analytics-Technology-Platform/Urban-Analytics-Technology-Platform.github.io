@@ -2,10 +2,10 @@
 name: "Colouring Cities/Colouring London"
 description: "Colouring Cities/Colouring London"
 image:
-  url: "https://alan-turing-institute.github.io/demoland-web/assets/map-7fd64ded.png"
+  url: "https://urban-analytics-technology-platform.github.io/demoland-web/assets/map-7fd64ded.png"
   alt: "Screenshot showing the demoland application"
 tags: ["modelling", "quality of life", "land use"]
-github: "https://github.com/alan-turing-institute/demoland-web"
+github: "https://github.com/colouring-cities/colouring-core"
 link: "https://colouringlondon.org/"
 tier: 2
 pi:
