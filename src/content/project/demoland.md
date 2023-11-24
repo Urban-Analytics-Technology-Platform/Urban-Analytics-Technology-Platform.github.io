@@ -5,8 +5,8 @@ image:
   url: "https://urban-analytics-technology-platform.github.io/demoland-web/assets/map-7fd64ded.png"
   alt: "Screenshot showing the demoland application"
 tags: ["modelling", "quality of life", "land use"]
-github: "https://urban-analytics-technology-platform.github.io/demoland-web"
-link: "https://alan-turing-institute.github.io/demoland-web/#10.05/54.94/-1.59"
+github: "https://github.com/Urban-Analytics-Technology-Platform/demoland-web"
+link: "https://urban-analytics-technology-platform.github.io/demoland-web/#10.05/54.94/-1.59"
 tier: 1
 funders: "Geospatial Comission"
 pis:
