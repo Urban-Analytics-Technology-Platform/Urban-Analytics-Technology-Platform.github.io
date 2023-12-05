@@ -1,14 +1,14 @@
 ---
-name: "Demoland"
+name: "DemoLand"
 description: "Spatial modelling for land management predicting the impact of large-scale planning and land use changes on the quality of life."
 image:
   url: "https://urban-analytics-technology-platform.github.io/demoland-web/assets/map-7fd64ded.png"
-  alt: "Screenshot showing the demoland application"
+  alt: "Screenshot showing the DemoLand application"
 tags: ["modelling", "quality of life", "land use"]
 github: "https://github.com/Urban-Analytics-Technology-Platform/demoland-web"
 link: "https://urban-analytics-technology-platform.github.io/demoland-web/#10.05/54.94/-1.59"
 tier: 1
-funders: "Geospatial Comission"
+funders: "Geospatial Commission"
 pis:
   - dani_arribas_bel
 team:
@@ -23,4 +23,4 @@ In this project, competing aspects of land use in an urban environment are ident
 
 The project is led by the Geospatial Commission and The Alan Turing Institute, working in conjunction with Newcastle City Council. You can read more about the project in the associated Land Use Demonstrator book.
 
-<iframe  style="width:100%;min-height:500px" src="https://urban-analytics-technology-platform.github.io/demoland-web/#10.05/54.94/-1.59" title="demoland"/>
+<iframe style="width:100%;min-height:500px" src="https://urban-analytics-technology-platform.github.io/demoland-web/#10.05/54.94/-1.59" title="demoland"/>
