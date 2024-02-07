@@ -2,7 +2,7 @@
 name: "DemoLand"
 description: "Spatial modelling for land management predicting the impact of large-scale planning and land use changes on the quality of life."
 image:
-  url: "https://urban-analytics-technology-platform.github.io/demoland-web/assets/map-7fd64ded.png"
+  url: "/images/demoland_landing.png"
   alt: "Screenshot showing the DemoLand application"
 tags: ["modelling", "quality of life", "land use"]
 github: "https://github.com/Urban-Analytics-Technology-Platform/demoland-web"
