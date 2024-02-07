@@ -2,7 +2,7 @@
 name: "Synthetic Population Catalyst"
 description: "Tool that creates a synthetic population for any area within Great Britain, including socio-demographic, health and daily activity data. Calibrated to 2020, with projections of some variables to between 2012 and 2039."
 image:
-  url: "https://github.com/alan-turing-institute/uatk-spc/blob/main/docs/logo_SPC_Black.png"
+  url: "/images/spc_image.png"
   alt: "SPC logo"
 tags: ["modelling", "populations", "synthetic"]
 github: "https://github.com/alan-turing-institute/uatk-spc"

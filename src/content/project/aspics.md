@@ -2,7 +2,7 @@
 name: "Agent-based Simulation of ePIdemics at Country Scale (ASPICS)"
 description: "SEIR model meant to work with SPC that models a pandemic in Great Britain"
 image:
-  url: "https://github.com/alan-turing-institute/uatk-aspics/blob/main/docs/logo.png"
+  url: "/images/aspics.png"
   alt: "aspics logo"
 tags: ["modelling", "epidemics", "SEIR"]
 github: "https://github.com/alan-turing-institute/uatk-aspics"
