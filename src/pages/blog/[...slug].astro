@@ -1,0 +1,84 @@
+---
+import { getCollection, getEntry, getEntries } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PersonLink from "../../components/PersonLink.astro";
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+export async function getStaticPaths() {
+  const blogs = await getCollection("blogs");
+  return blogs.map((entry) => {
+    const slug = entry.slug;
+    return {
+      params: { slug: entry.slug },
+      props: { entry },
+    };
+  });
+}
+
+let authors = [];
+let projects = [];
+/// get entries didn't want to work here for some reasion
+for (const author of entry.data.authors) {
+  let found = await getEntry("people", author);
+  authors.push(found);
+}
+
+if (entry.data.projects) {
+  for (const project of entry.data.projects) {
+    let found = await getEntry("project", project);
+    projects.push(found);
+  }
+}
+---
+
+<Base>
+  <section class="wrapper style1">
+    <div class="container">
+      <div class="row gtr-200">
+        <div class="col-3 col-12-narrower">
+          <div id="sidebar">
+            <section class="mb-4">
+              <h3>Authors</h3>
+              {authors.map((author) => <PersonLink person={author!} />)}
+            </section>
+
+            {
+              projects && projects.length > 0 && (
+                <section>
+                  <h3>Projects</h3>
+                  {projects.map((p) => (
+                    <a href={`/projects/${p?.slug}`}>{p?.data.name}</a>
+                  ))}
+                </section>
+              )
+            }
+          </div>
+        </div>
+
+        <div class="col-9 col-12-narrower imp-narrower">
+          <div id="content">
+            <article>
+              <header>
+                <h2>{entry.data.title}</h2>
+                {entry.data.draft && <p class="text-red-600">DRAFT</p>}
+                <p>Published on: {entry.data.publish_date}</p>
+              </header>
+              {
+                entry.data.image && (
+                  <img
+                    class="text-center w-full mb-4"
+                    src={entry.data.image.url}
+                    alt={entry.data.image.alt}
+                  />
+                )
+              }
+              <Content />
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
