@@ -1,17 +1,17 @@
 import { z, defineCollection, reference } from "astro:content";
 
+const Image = z.object({
+  url: z.string(),
+  alt: z.string(),
+});
+
 export const collections = {
   project: defineCollection({
     schema: z.object({
       name: z.string(),
       description: z.string(),
       tier: z.number(),
-      image: z
-        .object({
-          url: z.string(),
-          alt: z.string(),
-        })
-        .optional(),
+      image: Image.optional(),
       link: z.string(),
       github: z.string(),
       tags: z.array(z.string()),
@@ -26,6 +26,19 @@ export const collections = {
       firstName: z.string(),
       lastName: z.string(),
       avatarURL: z.string().optional(),
+    }),
+  }),
+  blog: defineCollection({
+    schema: z.object({
+      title: z.string(),
+      draft: z.boolean(),
+      slug: z.string().optional(),
+      publish_date: z.date(),
+      authors: z.array(reference("people")),
+      projects: z.array(reference("project")).optional(),
+      header_image: z.string().optional(),
+      tags: z.array(z.string()).optional(),
+      image: Image.optional(),
     }),
   }),
 };
