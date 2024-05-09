@@ -17,20 +17,10 @@ export async function getStaticPaths() {
   });
 }
 
-let authors = [];
-let projects = [];
-/// get entries didn't want to work here for some reasion
-for (const author of entry.data.authors) {
-  let found = await getEntry("people", author);
-  authors.push(found);
-}
-
-if (entry.data.projects) {
-  for (const project of entry.data.projects) {
-    let found = await getEntry("project", project);
-    projects.push(found);
-  }
-}
+let authors = await getEntries(entry.data.authors);
+let projects = entry.data.projects
+  ? await getEntries(entry.data.projects)
+  : null;
 ---
 
 <Base>

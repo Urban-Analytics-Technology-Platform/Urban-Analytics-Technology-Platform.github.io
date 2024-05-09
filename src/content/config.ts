@@ -28,11 +28,11 @@ export const collections = {
       avatarURL: z.string().optional(),
     }),
   }),
-  blog: defineCollection({
+  blogs: defineCollection({
     schema: z.object({
       title: z.string(),
+      summary: z.string(),
       draft: z.boolean(),
-      slug: z.string().optional(),
       publish_date: z.date(),
       authors: z.array(reference("people")),
       projects: z.array(reference("project")).optional(),

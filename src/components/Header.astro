@@ -49,7 +49,12 @@ const tier2Pathnames = tier2Projects.map(
           {
             tier1Projects.map((project) => (
               <li>
-                <a href={"/projects/" + project.slug}>{project.data.name}</a>
+                <a
+                  href={"/projects/" + project.slug}
+                  aria-label={`Project ${project.data.name}`}
+                >
+                  {project.data.name}
+                </a>
               </li>
             ))
           }
@@ -61,11 +66,19 @@ const tier2Pathnames = tier2Projects.map(
           {
             tier2Projects.map((project) => (
               <li>
-                <a href={"/projects/" + project.slug}>{project.data.name}</a>
+                <a
+                  href={"/projects/" + project.slug}
+                  aria-label={`Project ${project.data.name}`}
+                >
+                  {project.data.name}
+                </a>
               </li>
             ))
           }
         </ul>
+      </li>
+      <li>
+        <a href="/blog" aria-label={`Blog`}>Blog</a>
       </li>
     </ul>
   </nav>

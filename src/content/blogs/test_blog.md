@@ -1,10 +1,10 @@
 ---
 title: "Chat GPT wrote this"
 slug: "test_blog"
-draft: true
+draft: false
 authors:
   - stuart_lynn
-publish_date: "08-05-2024"
+publish_date: 2024-05-08
 projects:
   - popgetter
 tags:
@@ -13,6 +13,8 @@ tags:
 image:
   url: https://www.enterpriseai.news/wp-content/uploads/2022/08/geospatial-data_shutterstock-2078842243_900x-370x290.jpg
   alt: Some dumb GEOAI image
+
+summary: We explore how LLM models can be used to replace low wage workers while making everything just that little bit worse
 ---
 
 **Harnessing AI in Geospatial Applications: A Transformative Leap**
