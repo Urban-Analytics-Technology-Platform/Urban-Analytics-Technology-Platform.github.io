@@ -18,7 +18,9 @@ export async function getStaticPaths() {
 }
 
 let authors = await getEntries(entry.data.authors);
-let projects = entry.data.projects ? await getEntries(entry.data.projects) : [];
+let projects = entry.data.projects
+  ? await getEntries(entry.data.projects)
+  : null;
 ---
 
 <Base>
