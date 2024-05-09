@@ -2,6 +2,7 @@
 import { getCollection, getEntry, getEntries } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import PersonLink from "../../components/PersonLink.astro";
+import BlogCard from "../../components/BlogCard.astro";
 
 export async function getStaticPaths() {
   const project = await getCollection("project");
@@ -14,6 +15,11 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const pis = entry.data.pis ? await getEntries(entry.data.pis) : null;
 const team = entry.data.team ? await getEntries(entry.data.team) : null;
+const blogs = await getCollection("blogs");
+const blogsForProject = blogs.filter((b) =>
+  b.data?.projects?.map((p) => p.slug)?.includes(entry.slug),
+);
+
 const { Content } = await entry.render();
 ---
 
@@ -85,6 +91,18 @@ const { Content } = await entry.render();
               }
               <Content />
             </article>
+            {
+              blogsForProject && blogsForProject.length > 0 && (
+                <section>
+                  <h2>Blog posts</h2>
+                  <ul>
+                    {blogsForProject.map((b) => (
+                      <BlogCard blogPost={b} />
+                    ))}
+                  </ul>
+                </section>
+              )
+            }
           </div>
         </div>
       </div>

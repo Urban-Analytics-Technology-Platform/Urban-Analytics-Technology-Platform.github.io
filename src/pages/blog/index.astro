@@ -1,0 +1,35 @@
+---
+import { getCollection, getEntry, getEntries } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PersonLink from "../../components/PersonLink.astro";
+import BlogCard from "../../components/BlogCard.astro";
+
+const blogs = (await getCollection("blogs"))
+  .filter((b) => !b.data.draft)
+  .sort((a, b) => (a.data.publish_date > b.data.publish_date ? 1 : -1));
+
+const people = await getCollection("people");
+---
+
+<Base>
+  <section class="wrapper style1">
+    <div class="container">
+      <div class="row gtr-200">
+        <div class="col-12 col-12-narrower imp-narrower">
+          <div id="content">
+            <article>
+              <header>
+                <h2>Blogs</h2>
+              </header>
+              <section>
+                <ul>
+                  {blogs.map((b) => <BlogCard blogPost={b} />)}
+                </ul>
+              </section>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
