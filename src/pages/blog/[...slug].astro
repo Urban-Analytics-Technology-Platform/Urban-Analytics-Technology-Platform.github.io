@@ -31,7 +31,15 @@ let projects = entry.data.projects
           <div id="sidebar">
             <section class="mb-4">
               <h3>Authors</h3>
-              {authors.map((author) => <PersonLink person={author!} />)}
+              <ul class="links">
+                {
+                  authors.map((author) => (
+                    <li>
+                      <PersonLink person={author!} />
+                    </li>
+                  ))
+                }
+              </ul>
             </section>
 
             {
