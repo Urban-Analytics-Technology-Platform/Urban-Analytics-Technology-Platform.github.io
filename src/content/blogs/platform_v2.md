@@ -5,6 +5,7 @@ draft: true
 authors:
   - stuart_lynn
   - sam_greenbury
+  - dustin_carlino
 publish_date: 2024-05-08
 projects:
   - popgetter
@@ -115,6 +116,25 @@ To make it easier to work with SPC outputs, we have added two new features:
 
 Further [documentation](https://alan-turing-institute.github.io/uatk-spc/using_use_output.html#python) and [example notebooks](https://github.com/alan-turing-institute/uatk-spc/tree/main/python/examples) demonstrate the new features and show how the SPC toolkit can be used to read and build populations for data science and machine learning analyses.
 
+#### New tools for working with GeoJSON
+
+![gj_crossings](/blog_content/v2_release/gj_crossings.gif)
+
+Developed partly during Turing UA hackathon days, two exciting new "day-to-day" tools now make it easier to work with GeoJSON files:
+
+- [GeoJSON viewer](https://dabreegster.github.io/geojson-viewer): aiming to fill the gap between [geojson.io](https://geojson.io/) (missing features such as filtering, slow for large input) and QGIS (overpowered and hard to use), GeoJSON viewer empowers users with a fast viewer allowing them to filter and colour by attributes to spot real examples of features quickly.
+- [GeoDiffr](https://dabreegster.github.io/geodiffr): enabling users to compare two GeoJSON files and visually identify the differences between them. Example use cases include comparing the outputs of different routing algorithms or exploring how areas of interest have changed over time in OSM.
+
+#### Polygon widths
+
+![polygon_widths](/blog_content/v2_release/widths.gif)
+
+Understanding road geometries and road widths is essential for planning decisions for building dedicated walking and cycling infrastructure. Doing this in a performant way with existing tools can be challenging.
+
+We're excited to announce a new tool [yet-untitled polygon width tool](https://dabreegster.github.io/polygon-width) built in Rust with a simple web viewer to allow quick debugging of your particular input. If you have a GeoJSON file or you can draw your polygon, it’ll take you seconds to try this algorithm out on your data.
+
+For more details on these exciting developments, see this [recent blog](https://dabreegster.github.io/blog/june_2024/).
+
 ---
 
 #### Demoland now UK-wide with new experimental features
@@ -183,4 +203,8 @@ On the tooling side of Popgetter, we are planning on building a number of differ
 want from Popgetter, we are planning to build out a terminal user interface and web interface. We also think there is great utility in making Popgetter available in the data science and web tooling
 contexts. To enable those use cases, we will be developing Python and JavaScript interfaces for the Popgetter library.
 
-####
+#### Routing best practices: a guide
+
+Development of guidance on [routing best practices](https://github.com/Urban-Analytics-Technology-Platform/routing) has begun and aims to answer practical questions about the data preparation and runtime considerations for routing in both real-time and batch/analysis projects. Watch this space for the full version of this soon.
+
+You can expect some other exciting routing-related developments for the platform, as outlined in this [recent blog](https://dabreegster.github.io/blog/june_2024/), in the next cycles too!
