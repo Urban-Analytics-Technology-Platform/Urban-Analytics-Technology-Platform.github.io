@@ -123,7 +123,7 @@ Further [documentation](https://alan-turing-institute.github.io/uatk-spc/using_u
 Developed partly during Turing UA hackathon days, two exciting new "day-to-day" tools now make it easier to work with GeoJSON files:
 
 - [GeoJSON viewer](https://dabreegster.github.io/geojson-viewer): aiming to fill the gap between [geojson.io](https://geojson.io/) (missing features such as filtering, slow for large input) and QGIS (overpowered and hard to use), GeoJSON viewer empowers users with a fast viewer allowing them to filter and colour by attributes to spot real examples of features quickly.
-- [GeoDiffr](https://dabreegster.github.io/geodiffr): enabling users to compare two GeoJSON files and visually identify the differences between them. Example use cases include comparing the outputs of different routing algorithms or exploring how areas of interest have changed over time in OSM.
+- [GeoDiffr](https://dabreegster.github.io/geodiffr): enabling users to compare two GeoJSON files and visually identify the differences between them. Example use cases include comparing the outputs of different routing algorithms or exploring how areas of interest have changed over time in OpenStreetMap.
 
 #### Polygon widths
 
