@@ -202,9 +202,3 @@ synthetic population data from the SPC project.
 On the tooling side of Popgetter, we are planning on building a number of different ways for users to interact with the platform. To make it easier to find and create a list of the datasets you
 want from Popgetter, we are planning to build out a terminal user interface and web interface. We also think there is great utility in making Popgetter available in the data science and web tooling
 contexts. To enable those use cases, we will be developing Python and JavaScript interfaces for the Popgetter library.
-
-#### Routing best practices: a guide
-
-Development of guidance on [routing best practices](https://github.com/Urban-Analytics-Technology-Platform/routing) has begun and aims to answer practical questions about the data preparation and runtime considerations for routing in both real-time and batch/analysis projects. Watch this space for the full version of this soon.
-
-You can expect some other exciting routing-related developments for the platform, as outlined in this [recent blog](https://dabreegster.github.io/blog/june_2024/), in the next cycles too!
