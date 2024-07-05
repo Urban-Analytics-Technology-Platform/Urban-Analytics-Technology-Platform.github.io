@@ -15,7 +15,7 @@ tags:
   - platform
 image:
   url: https://www.enterpriseai.news/wp-content/uploads/2022/08/geospatial-data_shutterstock-2078842243_900x-370x290.jpg
-  alt: Some dumb GEOAI image
+  alt: Some GEOAI image
 
 summary: Debiased climate projections for cities, geospatial chatbots, a speedier SPC and so much more! Learn about what's new in the Urban Analytics Technology Platform
 ---
@@ -97,16 +97,14 @@ Communicating the results of our work to a large array of stakeholders often req
 - Examples of charts and graphs; and
 - Common UI styling.
 
-<video width="320" height="240" controls>
+<video width="600" height="400" controls>
 <source src="/blog_content/v2_release/template.mov" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
 We think these templates are a good starting point for anyone who might be interested in building urban analytics applications and so we are making them available to the wider community to use and improve on.
 
-The template source code is available on GitHub, but you can get started more quickly by running:
-
-    npm create @uatp/web@latest
+The template source code is available on GitHub, but you can get started more quickly by running in your terminal: **npm create @uatp/web@latest**
 
 As part of this work, we have been helping build some features upstream into the [svelte-maplibre](https://svelte-maplibre.vercel.app/) library that powers our maps. It's a great project that we have loved contributing to.
 
