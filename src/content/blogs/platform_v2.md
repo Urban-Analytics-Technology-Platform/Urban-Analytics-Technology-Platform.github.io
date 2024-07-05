@@ -6,6 +6,7 @@ authors:
   - stuart_lynn
   - sam_greenbury
   - dustin_carlino
+  - anna_zanchetta
 publish_date: 2024-05-08
 projects:
   - popgetter
@@ -152,8 +153,7 @@ Recently, we have been working with the Geospatial Commission to explore how new
 
 [![Foundation model game](/blog_content/v2_release/Foundation_model_game.png)](https://are-you-smarter-than-a-foundational-model.vercel.app/)
 
-We have also been exploring how large language models (LLMs) may provide a complementary interface to understand scenario changes. To do this, we developed a geospatially-aware LLM agent that is capable of answering a user's question about the scenario they produced in Demoland. This agent has access to Python for spatial and non-spatial calculations, a number of contextualising
-datasets and the open street map overpass API to lookup features. We were surprised at how well the LLM did at answering in-depth questions. You can see it in action here:
+We have also been exploring how large language models (LLMs) may provide a complementary interface to understand scenario changes. To do this, we developed a geospatially-aware LLM agent that is capable of answering a user's question about the scenario they produced in Demoland. This agent has access to Python for spatial and non-spatial calculations, a number of contextualising datasets and the open street map overpass API to lookup features. We were surprised at how well the LLM did at answering in-depth questions. You can see it in action here:
 
  <video width="320" height="240" controls>
   <source src="/blog_content/v2_release/chat.mp4" type="video/mp4">
