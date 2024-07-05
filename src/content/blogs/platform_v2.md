@@ -91,18 +91,24 @@ If you're interested in helping us develop this more, have a use case for it, or
 
 Communicating the results of our work to a large array of stakeholders often requires us to develop interactive dashboards and web-based tools. As we have built these tools for a number of different projects, we have started noticing common patterns and requirements. Our applications often have similar layouts, interaction models, and processing requirements and so, to accelerate our ability to produce new tools as quickly as possible and to more easily maintain existing tools, we have started developing a set of application templates. These currently consist of:
 
-- A svelte based web application.
-- Common layouts for our applications.
-- An optional web assembly rust backend.
-- An optional python (Pyodide) based backend.
-- Some guidance on charts and graphs.
+- A web application written with Svelte;
+- Common layouts for our applications;
+- Optional Rust and Python backends which are run in the browser using WebAssembly;
+- Examples of charts and graphs; and
 - Common UI styling.
 
-We think these templates are a good starting point for anyone who might be interested in building urban analytics applications and so we are making them available to the winder community to use and improve on.
+<video width="320" height="240" controls>
+<source src="/blog_content/v2_release/template.mov" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
-To get started check out our repo here: https://github.com/Urban-Analytics-Technology-Platform/web-app-template
+We think these templates are a good starting point for anyone who might be interested in building urban analytics applications and so we are making them available to the wider community to use and improve on.
 
-As part of this work, we have been helping build some features upstream into the [svelte-map-libre](https://svelte-maplibre.vercel.app/) library that powers our maps. It's a great project that we have loved contributing to.
+The template source code is available on GitHub, but you can get started more quickly by running:
+
+    npm create @uatp/web@latest
+
+As part of this work, we have been helping build some features upstream into the [svelte-maplibre](https://svelte-maplibre.vercel.app/) library that powers our maps. It's a great project that we have loved contributing to.
 
 #### New ways to access SPC
 
