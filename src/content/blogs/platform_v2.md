@@ -162,14 +162,14 @@ Your browser does not support the video tag.
 
 #### Results from the research on Computer Vision for public good and disaster relief
 
-Within the partnership with HOT - Humanitarian Openstreetmap Team, a workflow was built to assess the performance of their burgeoning web app [fAIr](https://www.hotosm.org/tech-suite/fair/). fAIr is an open source AI-assisted mapping tool to generate semi-automated building footprints features from aerial imagery. In the web app, OpenStreetMap (OSM) users can create their own local training dataset, train/fine-tune a pre-trained Eff-UNet model, and then map into OSM with the assistance of their own local model.
+Within the partnership with HOT - Humanitarian OpenStreetMap Team, a workflow was built to assess the performance of their growing web app [fAIr](https://www.hotosm.org/tech-suite/fair/). fAIr is an open source AI-assisted mapping tool to generate semi-automated building footprints features from aerial imagery. In the web app, OpenStreetMap (OSM) users can create their own local training dataset, train/fine-tune a pre-trained Eff-UNet model (for more details, see the [RAMP](https://rampml.global/) initiative), and then map into OSM with the assistance of their own local model.
 
-Though, how accurate is fAIr in detecting buildings and can we assess how it performs in different contexts, i.e. do factors like the type of roof cover, the buildings density, urbanity type or regional factors affect the training performance?
+The recent research question we have been investigating is how accurate fAIr is in detecting buildings and how it performs in different contexts. For example, do factors like the type of roof cover, the buildings density, urbanity type or regional factors affect the training performance?
 
-We have tested fAIr on 25 cities around the Globe, and compared the currently used training/validation accuracy metric (Categorical accuracy) against 4 other metrics relevant in image segmentation studies: Precision, Recall, F1 score, and IoU (see [fork of fAIr-utilities](https://github.com/ciupava/fAIr-utilities)).
+We have tested fAIr on 25 cities around the globe and compared the currently used training/validation accuracy metric (categorical accuracy) against 4 other metrics relevant in image segmentation studies: precision, recall, F1 score, and intersection-over-union (IoU) (see [fork of fAIr-utilities](https://github.com/ciupava/fAIr-utilities)).
 The results were presented at [ML4EO 2024](https://ml4eo.org/) - Machine Learning for Earth Observation Workshop in Exeter in June, see below our winning entry for the image competition!
 
-More on this in the related blog post.
+More on this to come in an upcoming related blog post.
 
 ![buifoot_image](/blog_content/v2_release/buifoot_ml4eo.jpg)
 
@@ -218,4 +218,4 @@ contexts. To enable those use cases, we will be developing Python and JavaScript
 
 #### More on Computer Vision for public good and disaster relief
 
-Future plans for fAIr include the extension to other features detection, such as land use and water bodies. Also, the implementation of other ML backbones architectures during training is currently being investigated. The research will then be extended to assess how fAIr performs in these new cases.
+Future plans for fAIr include the extension to detect other features, such as land use and water bodies. Also, the implementation of other ML backbones architectures during training is currently being investigated. The research will then be extended to assess how fAIr performs for these new data and models.
