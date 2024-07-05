@@ -52,11 +52,8 @@ If you're interested in having your country in Popgetter, we would love to work 
 #### Clim-recal: A climate bias correction dataset for 3 cities
 
 Climate change, and the increase in frequent extreme weather events, is one of the largest challenges that urban areas will face over the next 30 years.
-One of the key tools to understanding how climate will change in the future is large physics-based simulations. The Met Office provides a number of these
-down to a 2km grid scale, which could help us understand and prepare for climate change at the city scale. Unfortunately, for a number of reasons
-(limited spatial resolution, simplified thermodynamics, etc), the projections at a small scale can be systematically off. Bias correction is a suite of
-methods that aims to correct these systematic errors by comparing simulations to historic observations of the climate. It uses the discrepancies between
-the simulation and the models to find ways to correct them that can be applied to future predictions.
+
+One of the key tools to understanding how climate will change in the future is large physics-based simulations. The Met Office provides a number of these down to a 2km grid scale, which could help us understand and prepare for climate change at the city scale. Unfortunately, for a number of reasons (limited spatial resolution, simplified thermodynamics, etc), the projections at a small scale can be systematically off. Bias correction is a suite of methods that aims to correct these systematic errors by comparing simulations to historic observations of the climate. It uses the discrepancies between the simulation and the models to find ways to correct them that can be applied to future predictions.
 
 There exists a large number of different ways of doing this kind of bias correction and it's hard to know which to apply when, especially for non-climate experts. These methods also need the historic data and simulations to be aligned both spatially and temporally.
 
@@ -64,7 +61,7 @@ There exists a large number of different ways of doing this kind of bias correct
 
 That's why we are releasing a set of combined observation and simulation datasets for 3 cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities.
 
-You can find the data here and the metrics for scoring the data here (TODO add links once Griff has the website up).
+You can find the data here and the metrics for scoring the data [here](https://alan-turing-institute.github.io/clim-recal/docs/datasets.html).
 
 Once we have these metrics, we plan to release bias-corrected climate projections for the whole of the UK and make them accessible for a number of use cases.
 
