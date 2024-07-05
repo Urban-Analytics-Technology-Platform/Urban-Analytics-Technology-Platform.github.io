@@ -12,7 +12,7 @@ team:
   - dustin_carlino
   - stuart_lynn
   - andy_smith
-  - jon_yong
+  - penelope_yong
   - sam_greenbury
 ---
 

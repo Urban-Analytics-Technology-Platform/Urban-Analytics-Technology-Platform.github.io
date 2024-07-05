@@ -15,6 +15,8 @@ team:
   - stuart_lynn
   - martin_fleischmann
   - penelope_yong
+  - barbara_metzler
+  - anna_zanchetta
 ---
 
 This interactive app showcases the outcomes of the Land Use Demonstrator project, which seeks to develop a modelling system leveraging data science and AI to support decision-making in land use policy.
