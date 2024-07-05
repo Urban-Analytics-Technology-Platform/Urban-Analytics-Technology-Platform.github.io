@@ -49,7 +49,7 @@ We currently support the UK (Scotland, England, North Ireland and Wales), Belgiu
 
 If you're interested in having your country in Popgetter, we would love to work with you – reach out and we can help you through the process!
 
-#### Clim-recal: A climate bias correction dataset for 3 cities
+#### clim-recal: A climate bias correction dataset for three cities
 
 Climate change, and the increase in frequent extreme weather events, is one of the largest challenges that urban areas will face over the next 30 years.
 One of the key tools to understanding how climate will change in the future is large physics-based simulations. The Met Office provides a number of these
@@ -60,15 +60,13 @@ the simulation and the models to find ways to correct them that can be applied t
 
 There exists a large number of different ways of doing this kind of bias correction and it's hard to know which to apply when, especially for non-climate experts. These methods also need the historic data and simulations to be aligned both spatially and temporally.
 
-![Clim recal diagram](/blog_content/v2_release/clim_recal_process.png)
+![clim-recal diagram](/blog_content/v2_release/clim_recal_process.png)
 
-That's why we are releasing a set of combined observation and simulation datasets for 3 cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities.
+That's why we are releasing a set of combined observation and simulation datasets for three cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities.
 
-You can find the data here and the metrics for scoring the data here (TODO add links once Griff has the website up).
+Once we have these metrics, we plan to release bias-corrected climate projections for the whole of the UK and make them accessible for a number of use cases. You will be able to find the data and metrics [here]() as soon as they are published.
 
-Once we have these metrics, we plan to release bias-corrected climate projections for the whole of the UK and make them accessible for a number of use cases.
-
-#### Vulnerable populations explorer
+#### Vulnerable Populations Explorer
 
 Understanding how climate will affect people in the future requires us to understand, not just the hazards they will face (extreme temperature), but also who is vulnerable to those hazards and who will be exposed to them.
 
@@ -197,7 +195,7 @@ For further details, a quickstart guide, and benchmarks, see the [README.md](htt
 
 The SPC described [above](#new-ways-to-access-spc) in our update with the new [SPC toolkit](https://github.com/alan-turing-institute/uatk-spc/tree/main/python) includes daily diaries for capturing how people spend their time, e.g. proportion of time at work, school, or retail venues. However, more fine-grained detail about both the order in which they complete their daily activities and how they complete them (e.g. car, walk, bus) is missing. Understanding this can help us better understand how people spend their time, which can be useful for a wide range of applications such as transport demand modelling.
 
-As such, we have introduced [Activity-based Model(AcBM)](https://github.com/Urban-Analytics-Technology-Platform/acbm), a pipeline aiming to extend the [Synthetic Population Catalyst (SPC)](https://github.com/alan-turing-institute/uatk-spc) for transport demand models. It will combine the [National Travel Survey (NTS)](https://www.gov.uk/government/collections/national-travel-survey-statistics) with SPC population members through matching and then assign venues for the activities in schedules from the NTS to derive spatial trajectories associated with schedules for individuals.
+As such, we are developing the [Activity-based Model(AcBM)](https://github.com/Urban-Analytics-Technology-Platform/acbm), a pipeline aiming to extend the [Synthetic Population Catalyst (SPC)](https://github.com/alan-turing-institute/uatk-spc) for transport demand models. It will combine the [National Travel Survey (NTS)](https://www.gov.uk/government/collections/national-travel-survey-statistics) with SPC population members through matching and then assign venues for the activities in schedules from the NTS to derive spatial trajectories associated with schedules for individuals.
 
 For more details, check out the [AcBM documentation](https://github.com/Urban-Analytics-Technology-Platform/acbm).
 
