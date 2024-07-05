@@ -6,6 +6,7 @@ authors:
   - stuart_lynn
   - sam_greenbury
   - dustin_carlino
+  - anna_zanchetta
 publish_date: 2024-05-08
 projects:
   - popgetter
@@ -152,13 +153,25 @@ Recently, we have been working with the Geospatial Commission to explore how new
 
 [![Foundation model game](/blog_content/v2_release/Foundation_model_game.png)](https://are-you-smarter-than-a-foundational-model.vercel.app/)
 
-We have also been exploring how large language models (LLMs) may provide a complementary interface to understand scenario changes. To do this, we developed a geospatially-aware LLM agent that is capable of answering a user's question about the scenario they produced in Demoland. This agent has access to Python for spatial and non-spatial calculations, a number of contextualising
-datasets and the open street map overpass API to lookup features. We were surprised at how well the LLM did at answering in-depth questions. You can see it in action here:
+We have also been exploring how large language models (LLMs) may provide a complementary interface to understand scenario changes. To do this, we developed a geospatially-aware LLM agent that is capable of answering a user's question about the scenario they produced in Demoland. This agent has access to Python for spatial and non-spatial calculations, a number of contextualising datasets and the open street map overpass API to lookup features. We were surprised at how well the LLM did at answering in-depth questions. You can see it in action here:
 
  <video width="320" height="240" controls>
   <source src="/blog_content/v2_release/chat.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
+
+#### Results from the research on Computer Vision for public good and disaster relief
+
+Within the partnership with HOT - Humanitarian OpenStreetMap Team, a workflow was built to assess the performance of their growing web app [fAIr](https://www.hotosm.org/tech-suite/fair/). fAIr is an open source AI-assisted mapping tool to generate semi-automated building footprints features from aerial imagery. In the web app, OpenStreetMap (OSM) users can create their own local training dataset, train/fine-tune a pre-trained Eff-UNet model (for more details, see the [RAMP](https://rampml.global/) initiative), and then map into OSM with the assistance of their own local model.
+
+The recent research question we have been investigating is how accurate fAIr is in detecting buildings and how it performs in different contexts. For example, do factors like the type of roof cover, the buildings density, urbanity type or regional factors affect the training performance?
+
+We have tested fAIr on 25 cities around the globe and compared the currently used training/validation accuracy metric (categorical accuracy) against 4 other metrics relevant in image segmentation studies: precision, recall, F1 score, and intersection-over-union (IoU) (see [fork of fAIr-utilities](https://github.com/ciupava/fAIr-utilities)).
+The results were presented at [ML4EO 2024](https://ml4eo.org/) - Machine Learning for Earth Observation Workshop in Exeter in June, see below our winning entry for the image competition!
+
+More on this to come in an upcoming related blog post.
+
+![buifoot_image](/blog_content/v2_release/buifoot_ml4eo.jpg)
 
 ### What's gotten better?
 
@@ -196,9 +209,13 @@ We think there is a lot to explore in this area so watch this space.
 
 With the release of Popgetter v1, we are making it easier for our projects to access census data from multiple countries in a consistent and predictable way. There is, however, so much more we want to do with Popgetter. Over the next few months, we are planning on adding even more data: expanding the number of countries covered, adding data products for the existing countries, and exploring other types of data that we can bring into the platform.
 
-Beyond census data, two high priorities datasets we are planning on working on next is the data that went into producing the Urban Grammer signatures, along with the signatures themselves, and our
+Beyond census data, two high priorities datasets we are planning on working on next is the data that went into producing the Urban Grammar signatures, along with the signatures themselves, and our
 synthetic population data from the SPC project.
 
 On the tooling side of Popgetter, we are planning on building a number of different ways for users to interact with the platform. To make it easier to find and create a list of the datasets you
 want from Popgetter, we are planning to build out a terminal user interface and web interface. We also think there is great utility in making Popgetter available in the data science and web tooling
 contexts. To enable those use cases, we will be developing Python and JavaScript interfaces for the Popgetter library.
+
+#### More on Computer Vision for public good and disaster relief
+
+Future plans for fAIr include the extension to detect other features, such as land use and water bodies. Also, the implementation of other ML backbones architectures during training is currently being investigated. The research will then be extended to assess how fAIr performs for these new data and models.
