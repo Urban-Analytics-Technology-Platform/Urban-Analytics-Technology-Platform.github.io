@@ -14,6 +14,7 @@ pis:
 team:
   - hadrien_salat
   - sam_greenbury
+  - anna_zanchetta
 ---
 
 <iframe  style="width:100%;min-height:500px" src="/images/spc_image.png" title="SPC Schema"/>
