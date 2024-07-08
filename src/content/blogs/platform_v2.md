@@ -104,7 +104,7 @@ Your browser does not support the video tag.
 
 We think these templates are a good starting point for anyone who might be interested in building urban analytics applications and so we are making them available to the wider community to use and improve on.
 
-The template source code is available on GitHub, but you can get started more quickly by running in your terminal: **npm create @uatp/web@latest**
+The template source code is available on [GitHub](https://github.com/Urban-Analytics-Technology-Platform/web-app-template), but you can get started more quickly by running in your terminal: **npm create @uatp/web@latest**
 
 As part of this work, we have been helping build some features upstream into the [svelte-maplibre](https://svelte-maplibre.vercel.app/) library that powers our maps. It's a great project that we have loved contributing to.
 
