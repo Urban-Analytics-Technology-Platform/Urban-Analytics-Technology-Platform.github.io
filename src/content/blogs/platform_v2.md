@@ -13,20 +13,36 @@ projects:
 tags:
   - release
   - platform
-image:
-  url: https://www.enterpriseai.news/wp-content/uploads/2022/08/geospatial-data_shutterstock-2078842243_900x-370x290.jpg
-  alt: Some GEOAI image
 
 summary: Debiased climate projections for cities, geospatial chatbots, a speedier SPC and so much more! Learn about what's new in the Urban Analytics Technology Platform
 ---
 
-## Technology platform 2.0 release blog
+The Urban Analytics team has made significant strides with the Technology Platform over the past six months, consolidating its resources, enhancing its tools, and planning for future developments.
 
-The Urban Analytics team has made significant strides with the Technology Platform over the past six months, consolidating its resources, enhancing its tools, and planning for future developments. This blog post will summarise the latest progress, categorised under "What's New," "What's Improved," and "What's Next."
+This blog post will summarise the latest progress, categorised under: "What's new," "What's improved," and "What's next"
+
+- [What's new](#whats-new)
+  - [Popgetter v0.2 release](#popgetter-v02-release)
+  - [clim-recal: A climate bias correction dataset for three cities](#clim-recal-a-climate-bias-correction-dataset-for-three-cities)
+  - [Vulnerable Populations Explorer](#vulnerable-populations-explorer)
+  - [App templates](#app-templates)
+  - [New ways to access SPC](#new-ways-to-access-spc)
+  - [New tools for working with GeoJSON](#new-tools-for-working-with-geojson)
+  - [Polygon widths](#polygon-widths)
+  - [Demoland: now UK-wide with new experimental features](#demoland-now-uk-wide-with-new-experimental-features)
+  - [Demoland: experiments](#demoland-experiments)
+  - [Results from the research on computer vision for public good and disaster relief](#results-from-the-research-on-computer-vision-for-public-good-and-disaster-relief)
+- [What's improved](#whats-improved)
+  - [Making SPENSER faster](#making-spenser-faster)
+- [What's next](#whats-next)
+  - [Activity-based model (AcBM) for SPC](#activity-based-model-acbm-for-spc)
+  - [LLM toolkit](#llm-toolkit)
+  - [Popgetter v0.3](#popgetter-v03)
+  - [More on computer vision for public good and disaster relief](#more-on-computer-vision-for-public-good-and-disaster-relief)
 
 ---
 
-### What's new?
+### What's new
 
 We have added several new components to the platform as well as a few new applications for end users.
 
@@ -140,7 +156,7 @@ For more details on these exciting developments, see this [recent blog](https://
 
 ---
 
-#### Demoland now UK-wide with new experimental features
+#### Demoland: now UK-wide with new experimental features
 
 Demoland is our prototype tool for exploring the strategic trade-offs that come with land use planning decisions. Built in collaboration with the Geospatial Commission and Newcastle City Council, it allows users to change land use signatures and see the predicted impact of those changes on four quality of life metrics (house prices, access to jobs, access to greenspace, and air quality).
 
@@ -149,7 +165,7 @@ for the Isle of White running [here](https://urban-analytics-technology-platform
 
 Users can now also generate their own scenarios, see the impacts of those scenarios, and share them with others.
 
-##### Experiments in Demoland
+#### Demoland: experiments
 
 Recently, we have been working with the Geospatial Commission to explore how new AI-based approaches might impact land use planning. We have been focusing on using satellite imagery along with foundational models as complementary data for the input to the Demoland model. We have been surprised at how well this has worked in producing accurate predictions for air quality, so much so that we built a small [game](https://are-you-smarter-than-a-foundational-model.vercel.app/) for people to try and beat the model. It's harder than you might think!
 
@@ -162,7 +178,7 @@ We have also been exploring how large language models (LLMs) may provide a compl
 Your browser does not support the video tag.
 </video>
 
-#### Results from the research on Computer Vision for public good and disaster relief
+#### Results from the research on computer vision for public good and disaster relief
 
 Within the partnership with HOT - Humanitarian OpenStreetMap Team, a workflow was built to assess the performance of their growing web app [fAIr](https://www.hotosm.org/tech-suite/fair/). fAIr is an open source AI-assisted mapping tool to generate semi-automated building footprints features from aerial imagery. In the web app, OpenStreetMap (OSM) users can create their own local training dataset, train/fine-tune a pre-trained Eff-UNet model (for more details, see the [RAMP](https://rampml.global/) initiative), and then map into OSM with the assistance of their own local model.
 
@@ -175,7 +191,7 @@ More on this to come in an upcoming related blog post.
 
 ![buifoot_image](/blog_content/v2_release/buifoot_ml4eo.jpg)
 
-### What's gotten better?
+### What's improved
 
 #### Making SPENSER faster
 
@@ -187,7 +203,7 @@ For further details, a quickstart guide, and benchmarks, see the [README.md](htt
 
 ---
 
-### What's next?
+### What's next
 
 #### Activity-based model (AcBM) for SPC
 
@@ -207,9 +223,9 @@ wide variety of different tasks.
 
 We think there is a lot to explore in this area so watch this space.
 
-#### Popgetter v2
+#### Popgetter v0.3
 
-With the release of Popgetter v1, we are making it easier for our projects to access census data from multiple countries in a consistent and predictable way. There is, however, so much more we want to do with Popgetter. Over the next few months, we are planning on adding even more data: expanding the number of countries covered, adding data products for the existing countries, and exploring other types of data that we can bring into the platform.
+With the release of Popgetter v0.2, we are making it easier for our projects to access census data from multiple countries in a consistent and predictable way. There is, however, so much more we want to do with Popgetter. Over the next few months, we are planning on adding even more data: expanding the number of countries covered, adding data products for the existing countries, and exploring other types of data that we can bring into the platform.
 
 Beyond census data, two high priorities datasets we are planning on working on next is the data that went into producing the Urban Grammar signatures, along with the signatures themselves, and our
 synthetic population data from the SPC project.
@@ -218,6 +234,6 @@ On the tooling side of Popgetter, we are planning on building a number of differ
 want from Popgetter, we are planning to build out a terminal user interface and web interface. We also think there is great utility in making Popgetter available in the data science and web tooling
 contexts. To enable those use cases, we will be developing Python and JavaScript interfaces for the Popgetter library.
 
-#### More on Computer Vision for public good and disaster relief
+#### More on computer vision for public good and disaster relief
 
 Future plans for fAIr include the extension to detect other features, such as land use and water bodies. Also, the implementation of other ML backbones architectures during training is currently being investigated. The research will then be extended to assess how fAIr performs for these new data and models.
