@@ -161,7 +161,7 @@ For more details on these exciting developments, see this [recent blog](https://
 Demoland is our prototype tool for exploring the strategic trade-offs that come with land use planning decisions. Built in collaboration with the Geospatial Commission and Newcastle City Council, it allows users to change land use signatures and see the predicted impact of those changes on four quality of life metrics (house prices, access to jobs, access to greenspace, and air quality).
 
 Though initally built for Newcastle, we have been hard at work developing a pipeline that allows us to spin up a Demoland app for any part of the UK. You can check out a version of the app
-for the Isle of White running [here](https://urban-analytics-technology-platform.github.io/demoland-web/dev/isle_of_wight/). If you are interested in running Demoland for your local area, reach out to us to let us know. You might also notice another new feature in this demo: hex bin geographies. Now users can choose between the Urban Grammar geometries that were part of the original Demoland and the hex bin geometries you can see here.
+for the Isle of Wight running [here](https://urban-analytics-technology-platform.github.io/demoland-web/dev/isle_of_wight/). If you are interested in running Demoland for your local area, reach out to us to let us know. You might also notice another new feature in this demo: hex bin geographies. Now users can choose between the Urban Grammar geometries that were part of the original Demoland and the hex bin geometries you can see here.
 
 Users can now also generate their own scenarios, see the impacts of those scenarios, and share them with others.
 
