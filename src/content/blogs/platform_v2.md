@@ -131,9 +131,9 @@ The Synthetic Population Catalyst (SPC) ([paper](https://doi.org/10.1177/2399808
 To make it easier to work with SPC outputs, we have added two new features:
 
 - **Parquet outputs**: we've included new serializers to enable output in columnar [parquet](https://parquet.apache.org/) format. Parquet is designed to efficiently deserialize into the efficient Arrow memory layout. As an example, for West Yorkshire, peak memory usage and time-to-load drop from 11GB and 6 minutes down to 2GB and 2 seconds working with the new parquet output, as well as enabling previously challenging areas to load (such as Greater London), to be loadable in 10-20 seconds.
-- **[SPC toolkit (`uatk_spc`)](https://github.com/alan-turing-institute/uatk-spc/tree/main/python)**: we created a new Python package that simplifies reading and working with SPC outputs. You can now read protobuf or parquet populations directly from local file paths or a URL, as well as build dataframes from the fields of the population to produce customised datasets as needed.
+- **[SPC toolkit (`uatk_spc`)](https://github.com/alan-turing-institute/uatk-spc/tree/main/python#readme)**: we created a new Python package that simplifies reading and working with SPC outputs. You can now read protobuf or parquet populations directly from local file paths or a URL, as well as build dataframes from the fields of the population to produce customised datasets as needed.
 
-Further [documentation](https://alan-turing-institute.github.io/uatk-spc/using_use_output.html#python) and [example notebooks](https://github.com/alan-turing-institute/uatk-spc/tree/main/python/examples) demonstrate the new features and show how the SPC toolkit can be used to read and build populations for data science and machine learning analyses.
+Further [documentation](https://alan-turing-institute.github.io/uatk-spc/using_use_output.html#python) and [example notebooks](https://github.com/alan-turing-institute/uatk-spc/tree/main/python/examples) demonstrate the new features and show how the SPC toolkit can be used to read and build populations for data science and machine learning analyses. Please reach out and [open an issue](https://github.com/alan-turing-institute/uatk-spc/issues) if there are improvements or new features you would like to see in the SPC toolkit!
 
 #### New tools for working with GeoJSON
 
@@ -195,11 +195,11 @@ More on this to come in an upcoming related blog post.
 
 #### Making SPENSER faster
 
-Building on [SPENSER](https://www.turing.ac.uk/research/research-projects/synthetic-population-estimation-and-scenario-projection), in the UATP [microsimulation](https://github.com/Urban-Analytics-Technology-Plarform/microsimulation) fork, we have re-implemented part of the model to enable faster runtime, while maintaining the same underlying algorithm to enable it to be used as a drop-in substitute.
+Building on [SPENSER](https://www.turing.ac.uk/research/research-projects/synthetic-population-estimation-and-scenario-projection), in the UATP [microsimulation](https://github.com/Urban-Analytics-Technology-Platform/microsimulation) fork, we have re-implemented part of the model to enable faster runtime, while maintaining the same underlying algorithm to enable it to be used as a drop-in substitute.
 
 With improved performance, the work aims to facilitate the generation of ensembles of populations for uncertainty and scenario modelling, for example, for use as a base population for the [Synthetic Population Catalyst](https://github.com/alan-turing-institute/uatk-spc).
 
-For further details, a quickstart guide, and benchmarks, see the [README.md](https://github.com/Urban-Analytics-Technology-Platform/microsimulation/blob/main/microsimulation-rs/README.md) introducing `microsimulation-rs`.
+For further details, a quickstart guide, and benchmarks, see the [README.md](https://github.com/Urban-Analytics-Technology-Platform/microsimulation/tree/dev/microsimulation-rs#readme) introducing `microsimulation-rs`.
 
 ---
 
