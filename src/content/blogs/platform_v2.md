@@ -7,7 +7,6 @@ authors:
   - sam_greenbury
   - dustin_carlino
   - anna_zanchetta
-  - griffith_rees
 publish_date: 2024-05-08
 projects:
   - popgetter

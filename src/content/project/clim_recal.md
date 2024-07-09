@@ -6,7 +6,7 @@ image:
   alt: "Image of hills with trees and the glow of a fire behind them"
 tags: ["modelling", "quality of life", "land use"]
 github: "https://github.com/alan-turing-institute/clim-recal"
-link: "https://github.com/alan-turing-institute/clim-recal"
+link: "https://alan-turing-institute.github.io/clim-recal"
 tier: 2
 funders: "Turing ASG, SoCaR"
 pis:
@@ -14,11 +14,15 @@ pis:
   - gavin_shaddick
 team:
   - ruth_bowyer
-  - bowen_zhang
-  - griffith_rees
-  - greg_mingas
   - jennifer_ding
+  - sam_greenbury
+  - stuart_lynn
   - harry_meacher
+  - greg_mingas
+  - griffith_rees
+  - andy_smith
+  - camila_rangel_smith
+  - bowen_zhang
 ---
 
 Regional climate models (RCMs) contain systematic errors, or biases in their output [1]. Biases arise in RCMs for a number of reasons, such as the assumptions in the general circulation models (GCMs), and in the downscaling process from GCM to RCM [1,2].
