@@ -207,7 +207,7 @@ For further details, a quickstart guide, and benchmarks, see the [README.md](htt
 
 #### Activity-based model (AcBM) for SPC
 
-<!-- TODO: add diagram for AcBM -->
+![acbm_diagram](/blog_content/v2_release/acbm_diagram.png)
 
 The SPC described [above](#new-ways-to-access-spc) in our update with the new [SPC toolkit](https://github.com/alan-turing-institute/uatk-spc/tree/main/python) includes daily diaries for capturing how people spend their time, e.g. proportion of time at work, school, or retail venues. However, more fine-grained detail about both the order in which they complete their daily activities and how they complete them (e.g. car, walk, bus) is missing. Understanding this can help us better understand how people spend their time, which can be useful for a wide range of applications such as transport demand modelling.
 
