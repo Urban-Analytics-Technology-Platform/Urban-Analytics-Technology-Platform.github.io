@@ -7,6 +7,7 @@ authors:
   - sam_greenbury
   - dustin_carlino
   - anna_zanchetta
+  - griff-rees
 publish_date: 2024-05-08
 projects:
   - popgetter
@@ -69,13 +70,15 @@ If you're interested in having your country in Popgetter, we would love to work 
 
 Climate change, and the increase in frequent extreme weather events, is one of the largest challenges that urban areas will face over the next 30 years.
 
-One of the key tools to understanding how climate will change in the future is large physics-based simulations. The Met Office provides a number of these down to a 2km grid scale, which could help us understand and prepare for climate change at the city scale. Unfortunately, for a number of reasons (limited spatial resolution, simplified thermodynamics, etc), the projections at a small scale can be systematically off. Bias correction is a suite of methods that aims to correct these systematic errors by comparing simulations to historic observations of the climate. It uses the discrepancies between the simulation and the models to find ways to correct them that can be applied to future predictions.
+One of the key tools to understanding how climate will change in the future is large physics-based simulations. The Met Office provides a number of these down to a 2km grid scale, which could help us understand and prepare for climate change at the city scale. 
+
+Unfortunately, for a number of reasons (limited spatial resolution, simplified thermodynamics, etc), the projections at a small scale can be systematically off. Bias correction is a suite of methods that aims to correct these systematic errors by comparing simulations to historic observations of the climate. It uses the discrepancies between the simulation and the models to find ways to correct them that can be applied to future predictions.
 
 There exists a large number of different ways of doing this kind of bias correction and it's hard to know which to apply when, especially for non-climate experts. These methods also need the historic data and simulations to be aligned both spatially and temporally.
 
 ![clim-recal diagram](/blog_content/v2_release/clim_recal_process.png)
 
-That's why we are releasing a set of combined observation and simulation datasets for three cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities.
+That's why we are releasing a set of combined observation and simulation datasets for three cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities. We will be providing sample results soon on our [Exported Datasets](https://alan-turing-institute.github.io/clim-recal/docs/datasets.html) page.
 
 
 #### Vulnerable Populations Explorer
