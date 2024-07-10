@@ -79,19 +79,17 @@ If you're interested in having your country in Popgetter, we would love to work 
 #### clim-recal: A climate bias correction dataset for three cities
 
 Climate change, and the increase in frequent extreme weather events, is one of the largest challenges that urban areas will face over the next 30 years.
-One of the key tools to understanding how climate will change in the future is large physics-based simulations. The Met Office provides a number of these
-down to a 2km grid scale, which could help us understand and prepare for climate change at the city scale. Unfortunately, for a number of reasons
-(limited spatial resolution, simplified thermodynamics, etc), the projections at a small scale can be systematically off. Bias correction is a suite of
-methods that aims to correct these systematic errors by comparing simulations to historic observations of the climate. It uses the discrepancies between
-the simulation and the models to find ways to correct them that can be applied to future predictions.
+
+One of the key tools to understanding how climate will change in the future is large physics-based simulations. The Met Office provides a number of these down to a 2km grid scale, which could help us understand and prepare for climate change at the city scale. 
+
+Unfortunately, for a number of reasons (limited spatial resolution, simplified thermodynamics, etc), the projections at a small scale can be systematically off. Bias correction is a suite of methods that aims to correct these systematic errors by comparing simulations to historic observations of the climate. It uses the discrepancies between the simulation and the models to find ways to correct them that can be applied to future predictions.
 
 There exists a large number of different ways of doing this kind of bias correction and it's hard to know which to apply when, especially for non-climate experts. These methods also need the historic data and simulations to be aligned both spatially and temporally.
 
 ![clim-recal diagram](/blog_content/v2_release/clim_recal_process.png)
 
-That's why we are releasing a set of combined observation and simulation datasets for three cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities.
+That's why we are releasing a set of combined observation and simulation datasets for three cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities. We will be providing sample results soon on our [Exported Datasets](https://alan-turing-institute.github.io/clim-recal/docs/datasets.html) page.
 
-Once we have these metrics, we plan to release bias-corrected climate projections for the whole of the UK and make them accessible for a number of use cases. You will be able to find the data and metrics [here]() as soon as they are published.
 
 #### Vulnerable Populations Explorer
 
@@ -116,10 +114,10 @@ If you're interested in helping us develop this more, have a use case for it, or
 
 Communicating the results of our work to a large array of stakeholders often requires us to develop interactive dashboards and web-based tools. As we have built these tools for a number of different projects, we have started noticing common patterns and requirements. Our applications often have similar layouts, interaction models, and processing requirements and so, to accelerate our ability to produce new tools as quickly as possible and to more easily maintain existing tools, we have started developing a set of application templates. These currently consist of:
 
-- A web application written with Svelte;
-- Common layouts for our applications;
-- Optional Rust and Python backends which are run in the browser using WebAssembly;
-- Examples of charts and graphs; and
+- A web application written with Svelte.
+- Common layouts for our applications.
+- Optional Rust and Python backends which are run in the browser using WebAssembly.
+- Examples of charts and graphs.
 - Common UI styling.
 
 <video width="600" height="400" controls>

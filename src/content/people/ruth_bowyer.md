@@ -1,6 +1,6 @@
 ---
 firstName: "Ruth"
-lastName: "Bower"
+lastName: "Bowyer"
 avatarURL: "https://www.turing.ac.uk/sites/default/files/styles/people/public/2023-01/profeshpic.jpg?itok=5-ydqsmF"
 ---
 
