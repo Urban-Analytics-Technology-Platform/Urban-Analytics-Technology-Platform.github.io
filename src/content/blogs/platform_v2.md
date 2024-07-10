@@ -7,12 +7,23 @@ authors:
   - sam_greenbury
   - dustin_carlino
   - anna_zanchetta
-publish_date: 2024-05-08
+  - penelope_yong
+  - griffith_rees
+  - andy_smith
+  - bowen_zhang
+
+publish_date: 2024-07-10
 projects:
   - popgetter
+  - clim_recal
+  - demoland
+  - spc
 tags:
   - release
   - platform
+image:
+  url: https://www.enterpriseai.news/wp-content/uploads/2022/08/geospatial-data_shutterstock-2078842243_900x-370x290.jpg
+  alt: Some GEOAI image
 
 summary: Debiased climate projections for cities, geospatial chatbots, a speedier SPC and so much more! Learn about what's new in the Urban Analytics Technology Platform
 ---
@@ -118,13 +129,15 @@ Your browser does not support the video tag.
 
 We think these templates are a good starting point for anyone who might be interested in building urban analytics applications and so we are making them available to the wider community to use and improve on.
 
-The template source code is available on [GitHub](https://github.com/Urban-Analytics-Technology-Platform/web-app-template), but you can get started more quickly by running in your terminal: **npm create @uatp/web@latest**
+The template source code is available on [GitHub](https://github.com/Urban-Analytics-Technology-Platform/web-app-template), but you can get started more quickly by running in your terminal:
+
+```shell
+npm create @uatp/web@latest
+```
 
 As part of this work, we have been helping build some features upstream into the [svelte-maplibre](https://svelte-maplibre.vercel.app/) library that powers our maps. It's a great project that we have loved contributing to.
 
 #### New ways to access SPC
-
-<!-- TODO: potentially add diagram for SPC toolkit -->
 
 The Synthetic Population Catalyst (SPC) ([paper](https://doi.org/10.1177/23998083231203066), [website](https://alan-turing-institute.github.io/uatk-spc/), [github](https://github.com/alan-turing-institute/uatk-spc)) provides a synthetic population of individuals and households for Great Britain (GB), including socio-demographic, income, health, and daily activity features, as well as future populations through projections.
 
@@ -213,7 +226,7 @@ The SPC described [above](#new-ways-to-access-spc) in our update with the new [S
 
 As such, we are developing the [Activity-based Model(AcBM)](https://github.com/Urban-Analytics-Technology-Platform/acbm), a pipeline aiming to extend the [Synthetic Population Catalyst (SPC)](https://github.com/alan-turing-institute/uatk-spc) for transport demand models. It will combine the [National Travel Survey (NTS)](https://www.gov.uk/government/collections/national-travel-survey-statistics) with SPC population members through matching and then assign venues for the activities in schedules from the NTS to derive spatial trajectories associated with schedules for individuals.
 
-For more details, check out the [AcBM documentation](https://github.com/Urban-Analytics-Technology-Platform/acbm).
+For more details, check out the [AcBM documentation](https://github.com/Urban-Analytics-Technology-Platform/acbm/wiki).
 
 #### LLM toolkit
 
