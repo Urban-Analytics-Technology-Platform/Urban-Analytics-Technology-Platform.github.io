@@ -7,9 +7,17 @@ authors:
   - sam_greenbury
   - dustin_carlino
   - anna_zanchetta
-publish_date: 2024-05-08
+  - penelope_yong
+  - griffith_rees
+  - andy_smith
+  - bowen_zhang
+
+publish_date: 2024-07-10
 projects:
   - popgetter
+  - clim_recal
+  - demoland
+  - spc
 tags:
   - release
   - platform
@@ -20,13 +28,32 @@ image:
 summary: Debiased climate projections for cities, geospatial chatbots, a speedier SPC and so much more! Learn about what's new in the Urban Analytics Technology Platform
 ---
 
-## Technology platform 2.0 release blog
+The Urban Analytics team has made significant strides with the Technology Platform over the past six months, consolidating its resources, enhancing its tools, and planning for future developments.
 
-The Urban Analytics team has made significant strides with the Technology Platform over the past six months, consolidating its resources, enhancing its tools, and planning for future developments. This blog post will summarise the latest progress, categorised under "What's New," "What's Improved," and "What's Next."
+This blog post will summarise the latest progress, categorised under: "What's new," "What's improved," and "What's next"
+
+- [What's new](#whats-new)
+  - [Popgetter v0.2 release](#popgetter-v02-release)
+  - [clim-recal: A climate bias correction dataset for three cities](#clim-recal-a-climate-bias-correction-dataset-for-three-cities)
+  - [Vulnerable Populations Explorer](#vulnerable-populations-explorer)
+  - [App templates](#app-templates)
+  - [New ways to access SPC](#new-ways-to-access-spc)
+  - [New tools for working with GeoJSON](#new-tools-for-working-with-geojson)
+  - [Polygon widths](#polygon-widths)
+  - [Demoland: now UK-wide with new experimental features](#demoland-now-uk-wide-with-new-experimental-features)
+  - [Demoland: experiments](#demoland-experiments)
+  - [Results from the research on computer vision for public good and disaster relief](#results-from-the-research-on-computer-vision-for-public-good-and-disaster-relief)
+- [What's improved](#whats-improved)
+  - [Making SPENSER faster](#making-spenser-faster)
+- [What's next](#whats-next)
+  - [Activity-based model (AcBM) for SPC](#activity-based-model-acbm-for-spc)
+  - [LLM toolkit](#llm-toolkit)
+  - [Popgetter v0.3](#popgetter-v03)
+  - [More on computer vision for public good and disaster relief](#more-on-computer-vision-for-public-good-and-disaster-relief)
 
 ---
 
-### What's new?
+### What's new
 
 We have added several new components to the platform as well as a few new applications for end users.
 
@@ -102,22 +129,24 @@ Your browser does not support the video tag.
 
 We think these templates are a good starting point for anyone who might be interested in building urban analytics applications and so we are making them available to the wider community to use and improve on.
 
-The template source code is available on [GitHub](https://github.com/Urban-Analytics-Technology-Platform/web-app-template), but you can get started more quickly by running in your terminal: **npm create @uatp/web@latest**
+The template source code is available on [GitHub](https://github.com/Urban-Analytics-Technology-Platform/web-app-template), but you can get started more quickly by running in your terminal:
+
+```shell
+npm create @uatp/web@latest
+```
 
 As part of this work, we have been helping build some features upstream into the [svelte-maplibre](https://svelte-maplibre.vercel.app/) library that powers our maps. It's a great project that we have loved contributing to.
 
 #### New ways to access SPC
-
-<!-- TODO: potentially add diagram for SPC toolkit -->
 
 The Synthetic Population Catalyst (SPC) ([paper](https://doi.org/10.1177/23998083231203066), [website](https://alan-turing-institute.github.io/uatk-spc/), [github](https://github.com/alan-turing-institute/uatk-spc)) provides a synthetic population of individuals and households for Great Britain (GB), including socio-demographic, income, health, and daily activity features, as well as future populations through projections.
 
 To make it easier to work with SPC outputs, we have added two new features:
 
 - **Parquet outputs**: we've included new serializers to enable output in columnar [parquet](https://parquet.apache.org/) format. Parquet is designed to efficiently deserialize into the efficient Arrow memory layout. As an example, for West Yorkshire, peak memory usage and time-to-load drop from 11GB and 6 minutes down to 2GB and 2 seconds working with the new parquet output, as well as enabling previously challenging areas to load (such as Greater London), to be loadable in 10-20 seconds.
-- **[SPC toolkit (`uatk_spc`)](https://github.com/alan-turing-institute/uatk-spc/tree/main/python)**: we created a new Python package that simplifies reading and working with SPC outputs. You can now read protobuf or parquet populations directly from local file paths or a URL, as well as build dataframes from the fields of the population to produce customised datasets as needed.
+- **[SPC toolkit (`uatk_spc`)](https://github.com/alan-turing-institute/uatk-spc/tree/main/python#readme)**: we created a new Python package that simplifies reading and working with SPC outputs. You can now read protobuf or parquet populations directly from local file paths or a URL, as well as build dataframes from the fields of the population to produce customised datasets as needed.
 
-Further [documentation](https://alan-turing-institute.github.io/uatk-spc/using_use_output.html#python) and [example notebooks](https://github.com/alan-turing-institute/uatk-spc/tree/main/python/examples) demonstrate the new features and show how the SPC toolkit can be used to read and build populations for data science and machine learning analyses.
+Further [documentation](https://alan-turing-institute.github.io/uatk-spc/using_use_output.html#python) and [example notebooks](https://github.com/alan-turing-institute/uatk-spc/tree/main/python/examples) demonstrate the new features and show how the SPC toolkit can be used to read and build populations for data science and machine learning analyses. Please reach out and [open an issue](https://github.com/alan-turing-institute/uatk-spc/issues) if there are improvements or new features you would like to see in the SPC toolkit!
 
 #### New tools for working with GeoJSON
 
@@ -140,16 +169,16 @@ For more details on these exciting developments, see this [recent blog](https://
 
 ---
 
-#### Demoland now UK-wide with new experimental features
+#### Demoland: now UK-wide with new experimental features
 
 Demoland is our prototype tool for exploring the strategic trade-offs that come with land use planning decisions. Built in collaboration with the Geospatial Commission and Newcastle City Council, it allows users to change land use signatures and see the predicted impact of those changes on four quality of life metrics (house prices, access to jobs, access to greenspace, and air quality).
 
 Though initally built for Newcastle, we have been hard at work developing a pipeline that allows us to spin up a Demoland app for any part of the UK. You can check out a version of the app
-for the Isle of White running [here](https://urban-analytics-technology-platform.github.io/demoland-web/dev/isle_of_wight/). If you are interested in running Demoland for your local area, reach out to us to let us know. You might also notice another new feature in this demo: hex bin geographies. Now users can choose between the Urban Grammar geometries that were part of the original Demoland and the hex bin geometries you can see here.
+for the Isle of Wight running [here](https://urban-analytics-technology-platform.github.io/demoland-web/dev/isle_of_wight/). If you are interested in running Demoland for your local area, reach out to us to let us know. You might also notice another new feature in this demo: hex bin geographies. Now users can choose between the Urban Grammar geometries that were part of the original Demoland and the hex bin geometries you can see here.
 
 Users can now also generate their own scenarios, see the impacts of those scenarios, and share them with others.
 
-##### Experiments in Demoland
+#### Demoland: experiments
 
 Recently, we have been working with the Geospatial Commission to explore how new AI-based approaches might impact land use planning. We have been focusing on using satellite imagery along with foundational models as complementary data for the input to the Demoland model. We have been surprised at how well this has worked in producing accurate predictions for air quality, so much so that we built a small [game](https://are-you-smarter-than-a-foundational-model.vercel.app/) for people to try and beat the model. It's harder than you might think!
 
@@ -162,7 +191,7 @@ We have also been exploring how large language models (LLMs) may provide a compl
 Your browser does not support the video tag.
 </video>
 
-#### Results from the research on Computer Vision for public good and disaster relief
+#### Results from the research on computer vision for public good and disaster relief
 
 Within the partnership with HOT - Humanitarian OpenStreetMap Team, a workflow was built to assess the performance of their growing web app [fAIr](https://www.hotosm.org/tech-suite/fair/). fAIr is an open source AI-assisted mapping tool to generate semi-automated building footprints features from aerial imagery. In the web app, OpenStreetMap (OSM) users can create their own local training dataset, train/fine-tune a pre-trained Eff-UNet model (for more details, see the [RAMP](https://rampml.global/) initiative), and then map into OSM with the assistance of their own local model.
 
@@ -175,29 +204,29 @@ More on this to come in an upcoming related blog post.
 
 ![buifoot_image](/blog_content/v2_release/buifoot_ml4eo.jpg)
 
-### What's gotten better?
+### What's improved
 
 #### Making SPENSER faster
 
-Building on [SPENSER](https://www.turing.ac.uk/research/research-projects/synthetic-population-estimation-and-scenario-projection), in the UATP [microsimulation](https://github.com/Urban-Analytics-Technology-Plarform/microsimulation) fork, we have re-implemented part of the model to enable faster runtime, while maintaining the same underlying algorithm to enable it to be used as a drop-in substitute.
+Building on [SPENSER](https://www.turing.ac.uk/research/research-projects/synthetic-population-estimation-and-scenario-projection), in the UATP [microsimulation](https://github.com/Urban-Analytics-Technology-Platform/microsimulation) fork, we have re-implemented part of the model to enable faster runtime, while maintaining the same underlying algorithm to enable it to be used as a drop-in substitute.
 
 With improved performance, the work aims to facilitate the generation of ensembles of populations for uncertainty and scenario modelling, for example, for use as a base population for the [Synthetic Population Catalyst](https://github.com/alan-turing-institute/uatk-spc).
 
-For further details, a quickstart guide, and benchmarks, see the [README.md](https://github.com/Urban-Analytics-Technology-Platform/microsimulation/blob/main/microsimulation-rs/README.md) introducing `microsimulation-rs`.
+For further details, a quickstart guide, and benchmarks, see the [README.md](https://github.com/Urban-Analytics-Technology-Platform/microsimulation/tree/dev/microsimulation-rs#readme) introducing `microsimulation-rs`.
 
 ---
 
-### What's next?
+### What's next
 
 #### Activity-based model (AcBM) for SPC
 
-<!-- TODO: add diagram for AcBM -->
+![acbm_diagram](/blog_content/v2_release/acbm_diagram.png)
 
 The SPC described [above](#new-ways-to-access-spc) in our update with the new [SPC toolkit](https://github.com/alan-turing-institute/uatk-spc/tree/main/python) includes daily diaries for capturing how people spend their time, e.g. proportion of time at work, school, or retail venues. However, more fine-grained detail about both the order in which they complete their daily activities and how they complete them (e.g. car, walk, bus) is missing. Understanding this can help us better understand how people spend their time, which can be useful for a wide range of applications such as transport demand modelling.
 
 As such, we are developing the [Activity-based Model(AcBM)](https://github.com/Urban-Analytics-Technology-Platform/acbm), a pipeline aiming to extend the [Synthetic Population Catalyst (SPC)](https://github.com/alan-turing-institute/uatk-spc) for transport demand models. It will combine the [National Travel Survey (NTS)](https://www.gov.uk/government/collections/national-travel-survey-statistics) with SPC population members through matching and then assign venues for the activities in schedules from the NTS to derive spatial trajectories associated with schedules for individuals.
 
-For more details, check out the [AcBM documentation](https://github.com/Urban-Analytics-Technology-Platform/acbm).
+For more details, check out the [AcBM documentation](https://github.com/Urban-Analytics-Technology-Platform/acbm/wiki).
 
 #### LLM toolkit
 
@@ -207,9 +236,9 @@ wide variety of different tasks.
 
 We think there is a lot to explore in this area so watch this space.
 
-#### Popgetter v2
+#### Popgetter v0.3
 
-With the release of Popgetter v1, we are making it easier for our projects to access census data from multiple countries in a consistent and predictable way. There is, however, so much more we want to do with Popgetter. Over the next few months, we are planning on adding even more data: expanding the number of countries covered, adding data products for the existing countries, and exploring other types of data that we can bring into the platform.
+With the release of Popgetter v0.2, we are making it easier for our projects to access census data from multiple countries in a consistent and predictable way. There is, however, so much more we want to do with Popgetter. Over the next few months, we are planning on adding even more data: expanding the number of countries covered, adding data products for the existing countries, and exploring other types of data that we can bring into the platform.
 
 Beyond census data, two high priorities datasets we are planning on working on next is the data that went into producing the Urban Grammar signatures, along with the signatures themselves, and our
 synthetic population data from the SPC project.
@@ -218,6 +247,6 @@ On the tooling side of Popgetter, we are planning on building a number of differ
 want from Popgetter, we are planning to build out a terminal user interface and web interface. We also think there is great utility in making Popgetter available in the data science and web tooling
 contexts. To enable those use cases, we will be developing Python and JavaScript interfaces for the Popgetter library.
 
-#### More on Computer Vision for public good and disaster relief
+#### More on computer vision for public good and disaster relief
 
 Future plans for fAIr include the extension to detect other features, such as land use and water bodies. Also, the implementation of other ML backbones architectures during training is currently being investigated. The research will then be extended to assess how fAIr performs for these new data and models.
