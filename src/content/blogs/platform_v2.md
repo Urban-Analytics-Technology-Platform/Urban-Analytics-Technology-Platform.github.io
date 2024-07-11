@@ -24,7 +24,7 @@ tags:
   - platform
 image:
   url: https://www.enterpriseai.news/wp-content/uploads/2022/08/geospatial-data_shutterstock-2078842243_900x-370x290.jpg
-  alt: Some GEOAI image
+  alt: GEOAI image
 
 summary: Debiased climate projections for cities, geospatial chatbots, a speedier SPC and so much more! Learn about what's new in the Urban Analytics Technology Platform
 ---
@@ -35,7 +35,7 @@ This blog post will summarise the latest progress, categorised under: "What's ne
 
 - [What's new](#whats-new)
   - [Popgetter v0.2 release](#popgetter-v02-release)
-  - [clim-recal: A climate bias correction dataset for three cities](#clim-recal-a-climate-bias-correction-dataset-for-three-cities)
+  - [clim-recal: a climate bias correction dataset for three cities](#clim-recal-a-climate-bias-correction-dataset-for-three-cities)
   - [Vulnerable Populations Explorer](#vulnerable-populations-explorer)
   - [App templates](#app-templates)
   - [New ways to access SPC](#new-ways-to-access-spc)
@@ -77,7 +77,7 @@ We currently support the UK (Scotland, England, North Ireland and Wales), Belgiu
 
 If you're interested in having your country in Popgetter, we would love to work with you – reach out and we can help you through the process!
 
-#### clim-recal: A climate bias correction dataset for three cities
+#### clim-recal: a climate bias correction dataset for three cities
 
 Climate change, and the increase in frequent extreme weather events, is one of the largest challenges that urban areas will face over the next 30 years.
 
@@ -127,11 +127,8 @@ Your browser does not support the video tag.
 
 We think these templates are a good starting point for anyone who might be interested in building urban analytics applications and so we are making them available to the wider community to use and improve on.
 
-The template source code is available on [GitHub](https://github.com/Urban-Analytics-Technology-Platform/web-app-template), but you can get started more quickly by running in your terminal:
-
-```shell
-npm create @uatp/web@latest
-```
+The template source code is available on [GitHub](https://github.com/Urban-Analytics-Technology-Platform/web-app-template), but you can get started more quickly by running in your terminal:<br>
+`npm create @uatp/web@latest`
 
 As part of this work, we have been helping build some features upstream into the [svelte-maplibre](https://svelte-maplibre.vercel.app/) library that powers our maps. It's a great project that we have loved contributing to.
 
@@ -189,6 +186,8 @@ We have also been exploring how large language models (LLMs) may provide a compl
 Your browser does not support the video tag.
 </video>
 
+<br>
+
 #### Results from the research on computer vision for public good and disaster relief
 
 Within the partnership with HOT - Humanitarian OpenStreetMap Team, a workflow was built to assess the performance of their growing web app [fAIr](https://www.hotosm.org/tech-suite/fair/). fAIr is an open source AI-assisted mapping tool to generate semi-automated building footprints features from aerial imagery. In the web app, OpenStreetMap (OSM) users can create their own local training dataset, train/fine-tune a pre-trained Eff-UNet model (for more details, see the [RAMP](https://rampml.global/) initiative), and then map into OSM with the assistance of their own local model.
@@ -228,22 +227,17 @@ For more details, check out the [AcBM documentation](https://github.com/Urban-An
 
 #### LLM toolkit
 
-We learnt a lot by integrating a chatbot-like interface into Demoland and we want to make building similar interfaces in future as easy as possible. To do that, we are currently working on a geospatial LLM agent and geospatial LLM toolkit. This toolkit will allow us and others to use a number of LLM techniques such as Retrieval Augmented Generation and Chaining and Function Calling in concert with
-a suite of tools that will allow the LLM to perform spatial computations, understand the context of a space, and interact with external knowledge stores to build geographically-aware agents for a
-wide variety of different tasks.
+We learnt a lot by integrating a chatbot-like interface into Demoland and we want to make building similar interfaces in future as easy as possible. To do that, we are currently working on a geospatial LLM agent and geospatial LLM toolkit. This toolkit will allow us and others to use a number of LLM techniques such as Retrieval Augmented Generation and Chaining and Function Calling in concert with a suite of tools that will allow the LLM to perform spatial computations, understand the context of a space, and interact with external knowledge stores to build geographically-aware agents for a wide variety of different tasks.
 
 We think there is a lot to explore in this area so watch this space.
 
 #### Popgetter v0.3
 
-With the release of Popgetter v0.2, we are making it easier for our projects to access census data from multiple countries in a consistent and predictable way. There is, however, so much more we want to do with Popgetter. Over the next few months, we are planning on adding even more data: expanding the number of countries covered, adding data products for the existing countries, and exploring other types of data that we can bring into the platform.
+With the release of [Popgetter v0.2](#popgetter-v02-release), we are making it easier for our projects to access census data from multiple countries in a consistent and predictable way. There is, however, so much more we want to do with Popgetter. Over the next few months, we are planning on adding even more data: expanding the number of countries covered, adding data products for the existing countries, and exploring other types of data that we can bring into the platform.
 
-Beyond census data, two high priorities datasets we are planning on working on next is the data that went into producing the Urban Grammar signatures, along with the signatures themselves, and our
-synthetic population data from the SPC project.
+Beyond census data, two high priorities datasets we are planning on working on next is the data that went into producing the Urban Grammar signatures, along with the signatures themselves, and our synthetic population data from the SPC project.
 
-On the tooling side of Popgetter, we are planning on building a number of different ways for users to interact with the platform. To make it easier to find and create a list of the datasets you
-want from Popgetter, we are planning to build out a terminal user interface and web interface. We also think there is great utility in making Popgetter available in the data science and web tooling
-contexts. To enable those use cases, we will be developing Python and JavaScript interfaces for the Popgetter library.
+On the tooling side of Popgetter, we are planning on building a number of different ways for users to interact with the platform. To make it easier to find and create a list of the datasets you want from Popgetter, we are planning to build out a terminal user interface and web interface. We also think there is great utility in making Popgetter available in the data science and web tooling contexts. To enable those use cases, we will be developing Python and JavaScript interfaces for the Popgetter library.
 
 #### More on computer vision for public good and disaster relief
 
