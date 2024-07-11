@@ -107,7 +107,7 @@ We are working on getting an interactive version of the site live but, while you
   </div>
 </div>
 
-If you're interested in helping us develop this more, have a use case for it, or want to give us feedback, please drop us a line at (TODO add email).
+If you're interested in helping us develop this more, have a use case for it, or want to give us feedback, please drop us a line or feel free to open an [issue](https://github.com/Urban-Analytics-Technology-Platform/VulnerablePopulationsExplorer/issues) on github.
 
 #### App templates
 
