@@ -1,0 +1,10 @@
+---
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  project: CollectionEntry<"project">;
+}
+
+const { project } = Astro.props;
+---
+
+{project && <a href={"/projects/" + project.slug}>{project.data.name}</a>}
