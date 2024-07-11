@@ -2,6 +2,7 @@
 import { getCollection, getEntry, getEntries } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import PersonLink from "../../components/PersonLink.astro";
+import ProjectLink from "../../components/ProjectLink.astro";
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
@@ -46,9 +47,13 @@ let projects = entry.data.projects
               projects && projects.length > 0 && (
                 <section>
                   <h3>Projects</h3>
-                  {projects.map((p) => (
-                    <a href={`/projects/${p?.slug}`}>{p?.data.name}</a>
-                  ))}
+                  <ul class="links">
+                    {projects.map((project) => (
+                      <li>
+                        <ProjectLink project={project} />
+                      </li>
+                    ))}
+                  </ul>
                 </section>
               )
             }
