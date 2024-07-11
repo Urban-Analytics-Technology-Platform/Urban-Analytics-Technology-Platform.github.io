@@ -1,8 +1,7 @@
 ---
 title: "Announcing the release of the V2 Technology Platform "
 slug: "platform_v2_release"
-draft: true
-# draft: false
+draft: false
 authors:
   - stuart_lynn
   - sam_greenbury
