@@ -31,20 +31,22 @@ const { Content } = await entry.render();
           <div id="sidebar">
             <section>
               <h3>Summary</h3>
-              <p>
-                Principal investigator: <br />
+              Principal investigators: <br />
+              <ul class="links">
                 {
                   pis &&
                     pis?.map((pi) => (
-                      <code>
-                        {
-                          // @ts-ignore
-                          <PersonLink person={pi} />
-                        }
-                      </code>
+                      <li>
+                        <a href="">
+                          {
+                            // @ts-ignore
+                            <PersonLink person={pi} />
+                          }
+                        </a>
+                      </li>
                     ))
                 }
-              </p>
+              </ul>
               <p>Funders: <br /> <code>{entry.data.funders}</code></p>
               <footer></footer>
             </section>

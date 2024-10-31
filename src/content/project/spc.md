@@ -11,10 +11,15 @@ tier: 2
 funders: "SoCaR"
 pis:
   - mark_birkin
+  - dani_arribas_bel
 team:
   - hadrien_salat
-  - sam_greenbury
+  - dustin_carlino
+  - fernando_benitez
   - anna_zanchetta
+  - sam_greenbury
+  - bowen_zhang
+  - hussein_mahfouz
 ---
 
 <iframe  style="width:100%;min-height:500px" src="/images/spc_image.png" title="SPC Schema"/>
