@@ -88,7 +88,7 @@ There exists a large number of different ways of doing this kind of bias correct
 
 ![clim-recal diagram](/blog_content/v2_release/clim_recal_process.png)
 
-That's why we are releasing a set of combined observation and simulation datasets for three cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities. We will be providing sample results soon on our [Exported Datasets](https://alan-turing-institute.github.io/clim-recal/docs/datasets.html) page.
+That's why we are releasing a set of combined observation and simulation datasets for three cities in the UK and inviting authors of bias correction methods to benchmark their methods for those cities. We will be providing sample results soon on our [Exported Datasets](https://alan-turing-institute.github.io/clim-recal/docs/download.html) page.
 
 #### Vulnerable Populations Explorer
 
