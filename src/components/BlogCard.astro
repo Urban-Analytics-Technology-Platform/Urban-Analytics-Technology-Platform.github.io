@@ -4,6 +4,17 @@ interface Props {
   blogPost: CollectionEntry<"blogs">;
 }
 const { blogPost } = Astro.props;
+
+const dateFormatOptions: object = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+};
+
+let formattedPublishDate = new Date(
+  blogPost.data.publish_date,
+).toLocaleDateString("en-GB", dateFormatOptions);
 ---
 
 <div
@@ -33,9 +44,7 @@ const { blogPost } = Astro.props;
   </div>
   <div class="w-full md:w-3/5 h-full flex items-center bg-gray-100 rounded-lg">
     <div class="p-12 md:pr-24 md:pl-16 md:py-12">
-      <span class="text-gray-400"
-        >{new Intl.DateTimeFormat().format(blogPost.data.publish_date)}</span
-      >
+      <span class="text-gray-400">{formattedPublishDate}</span>
       <p class="text-gray-600">{blogPost.data.summary}</p>
       <a
         class="flex items-baseline mt-3 text-indigo-600 hover:text-indigo-900 focus:text-indigo-900"

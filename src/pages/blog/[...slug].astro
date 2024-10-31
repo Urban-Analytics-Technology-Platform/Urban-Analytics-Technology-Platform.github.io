@@ -22,6 +22,17 @@ let authors = await getEntries(entry.data.authors);
 let projects = entry.data.projects
   ? await getEntries(entry.data.projects)
   : null;
+const dateFormatOptions: object = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+};
+
+let formattedPublishDate = new Date(entry.data.publish_date).toLocaleDateString(
+  "en-GB",
+  dateFormatOptions,
+);
 ---
 
 <Base>
@@ -66,7 +77,7 @@ let projects = entry.data.projects
               <header>
                 <h2>{entry.data.title}</h2>
                 {entry.data.draft && <p class="text-red-600">DRAFT</p>}
-                <p>Published on: {entry.data.publish_date}</p>
+                <p>Published on: {formattedPublishDate}</p>
               </header>
               {
                 entry.data.image && (
