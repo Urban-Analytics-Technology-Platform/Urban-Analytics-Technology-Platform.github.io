@@ -13,9 +13,9 @@ pis:
   - mark_birkin
   - gavin_shaddick
 team:
-  - fernando_benitez.md
+  - fernando_benitez
   - ruth_bowyer
-  - camila_rangel_smith.md
+  - camila_rangel_smith
   - jennifer_ding
   - harry_meacher
   - greg_mingas
