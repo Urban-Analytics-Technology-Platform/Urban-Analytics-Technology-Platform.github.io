@@ -1,7 +1,7 @@
 ---
 firstName: "Hussein"
 lastName: "Mahfouz"
-avatarURL: ""
+avatarURL: "https://www.turing.ac.uk/sites/default/files/styles/people/public/2023-09/hussein-mahfouz.jpg?itok=gp1nwD19"
 ---
 
 Hussein Mahfouz is a PhD student at the Institute for Transport Studies at the University of Leeds, focusing on network design from a decarbonisation perspective. His research interests encompass activity-based and agent-based modeling, network design problems, and the potential contribution of ride-sharing towards decarbonisation goals.
