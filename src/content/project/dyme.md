@@ -5,7 +5,7 @@ image:
   url: "https://www.turing.ac.uk/sites/default/files/styles/hero/public/2021-12/marek-piwnicki-2kqxgrgunzq-unsplash.jpg?itok=FXDUcYO4"
   alt: "Image of hills with trees and the glow of a fire behind them"
 tags: ["modelling", "climate"]
-github: "https://www.turing.ac.uk/research/research-projects/impacts-climate-change-and-heat-health"
+github: "https://github.com/alan-turing-institute/dymechh"
 link: "https://www.turing.ac.uk/research/research-projects/impacts-climate-change-and-heat-health"
 tier: 1
 funders: "Turing ASG, SoCaR"
@@ -13,12 +13,15 @@ pis:
   - mark_birkin
   - gavin_shaddick
 team:
+  - fernando_benitez
   - ruth_bowyer
-  - bowen_zhang
-  - griffith_rees
-  - greg_mingas
+  - camila_rangel_smith
   - jennifer_ding
   - harry_meacher
+  - greg_mingas
+  - griffith_rees
+  - andy_smith
+  - bowen_zhang
 ---
 
 # Introduction
